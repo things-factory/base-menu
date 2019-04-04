@@ -1,2 +1,1 @@
-import { updateBaseMenu } from './actions/main'
-export { updateBaseMenu }
+export { updateBaseMenu } from './actions/main'

@@ -7,7 +7,10 @@ const INITIAL_STATE = {
 const main = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case UPDATE_BASE_MENU:
-      return { ...state }
+      return {
+        ...state,
+        menus: action.menus
+      }
 
     default:
       return state
