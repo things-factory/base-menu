@@ -18,31 +18,51 @@ export default class MenuComponent extends connect(store)(LitElement) {
   }
 
   static get properties() {
-    return {}
+    return {
+      _menuId: String,
+      _menus: Array,
+      _currentMenu: Object
+    }
+  }
+
+  constructor() {
+    super()
+
+    this._menus = []
+    this._currentMenu = {
+      children: []
+    }
   }
 
   render() {
     return html`
       <ul class="nav">
         ${this._menus.map(
-          menu => html`
-            <li><a href=${menu.pageName}>${menu.name}</a></li>
+          (menu, idx) => html`
+            <li><a href=${`/${menu.pageName || 'base-menu-main'}/${idx}`}>${menu.name}</a></li>
           `
         )}
       </ul>
+
+      <ul>
+          ${this._currentMenu.children.map(c => {
+            return html`
+              <li>
+                <a href=${`/${c.pageName}`}>${c.name}</a>
+              </li>
+            `
+          })}
+      </ul>
+      
     `
   }
 
   stateChanged(state) {
-    var m = []
-    for (var i = 0; i < 5; i++) {
-      m.push({
-        name: `Menu ${i + 1}`,
-        pageName: `menu_${i + 1}`
-      })
-    }
+    this._menuId = state.app.resourceId
     this._menus = state.baseMenu.menus
-    if (!state.baseMenu.menus || state.baseMenu.menus.length === 0) this._menus = m
+    this._currentMenu = this._menus[this._menuId || 0] || {
+      children: []
+    }
   }
 }
 
