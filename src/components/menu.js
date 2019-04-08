@@ -45,15 +45,23 @@ export default class MenuComponent extends connect(store)(LitElement) {
       </ul>
 
       <ul>
-          ${this._currentMenu.children.map(c => {
-            return html`
-              <li>
-                <a href=${`/${c.pageName}`}>${c.name}</a>
-              </li>
-            `
-          })}
+        ${this._currentMenu.children.map(c => {
+          console.log(c)
+          return html`
+            ${c.routingType.toUpperCase() === 'RESOURCE'
+              ? html`
+                  <li>
+                    <a href="${`resource-form-main/${c.menuId}`}">${c.name}</a>
+                  </li>
+                `
+              : html`
+                  <li>
+                    <a href=${`/${c.pageName}`}>${c.name}</a>
+                  </li>
+                `}
+          `
+        })}
       </ul>
-      
     `
   }
 
