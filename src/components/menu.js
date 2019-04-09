@@ -108,7 +108,7 @@ export default class MenuComponent extends connect(store)(LitElement) {
               ${c.map(
                 (item, idx) =>
                   html`
-                    <li style="height: ${item.height}px">
+                    <li class="${item.class}">
                       ${c[idx].routingType.toUpperCase() === 'RESOURCE'
                         ? html`
                             <a href="/resource-form-main/${c[idx].menuId}">${c[idx].name}</a>
@@ -157,7 +157,7 @@ export default class MenuComponent extends connect(store)(LitElement) {
 
     this.items = this._currentMenu.children || []
     if (this.items.length > 0) {
-      this.items.forEach(item => (item.height = Math.round(Math.random() * 400) + 100)) // TODO: 메뉴별 크기 하드코딩 제거
+      this.items.forEach((item, idx) => (item.class = ['image', 'text'][Math.random() > 0.5 ? 0 : 1])) // TODO: 데이터를 기반으로 클래스를 초기화 하도록 수정
       this.calculateColumnCount()
       this.distributeColumnItems()
     }
