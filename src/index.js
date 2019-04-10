@@ -1,1 +1,1 @@
-export { updateBaseMenu } from './actions/main'
+export { updateBaseMenu, addRoutingType } from './actions/main'
