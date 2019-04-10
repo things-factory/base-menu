@@ -6,20 +6,28 @@ import '../components/menu'
 class BaseMenuMain extends connect(store)(LitElement) {
   static get properties() {
     return {
-      baseMenu: String
+      menuId: String,
+      menus: Array,
+      routingTypes: Object
     }
   }
   render() {
     return html`
       <section>
         <h2>BaseMenu</h2>
-        <menu-component></menu-component>
+        <menu-component
+          .menus="${this.menus}"
+          .routingTypes="${this.routingTypes}"
+          .menuId="${this.menuId}"
+        ></menu-component>
       </section>
     `
   }
 
   stateChanged(state) {
-    this.baseMenu = state.baseMenu.state_main
+    this.menus = state.baseMenu.menus
+    this.routingTypes = state.baseMenu.routingTypes
+    this.menuId = state.app.resourceId
   }
 }
 
