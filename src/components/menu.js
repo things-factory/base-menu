@@ -1,8 +1,6 @@
 import { LitElement, html, css } from 'lit-element'
-import { connect } from 'pwa-helpers/connect-mixin'
-import { store } from '@things-factory/shell'
 
-export default class MenuComponent extends connect(store)(LitElement) {
+export default class MenuComponent extends LitElement {
   static get styles() {
     return [
       css`
@@ -16,23 +14,42 @@ export default class MenuComponent extends connect(store)(LitElement) {
           margin: 0;
           display: flex;
         }
-        #main {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: center;
-        }
         #main > ul {
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-auto-rows: 150px;
+          list-style: none;
           padding: 0;
           margin: 0;
-          list-style: none;
-          display: flex;
-          flex-direction: column;
-          width: var(--menu-list-column-width);
-          margin: var(--menu-list-column-margin);
         }
         #main > ul > li {
           border: 1px solid #ccc;
           margin: var(--menu-list-item-margin);
+        }
+
+        @media (min-width: 600px) {
+          #main > ul {
+            grid-template-columns: auto auto auto;
+            grid-auto-rows: 200px;
+          }
+        }
+        @media (min-width: 1200px) {
+          #main > ul {
+            grid-template-columns: auto auto auto auto;
+            grid-auto-rows: 225px;
+          }
+        }
+        @media (min-width: 1800px) {
+          #main > ul {
+            grid-template-columns: auto auto auto auto auto;
+            grid-auto-rows: 240px;
+          }
+        }
+        @media (min-width: 2400px) {
+          #main > ul {
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-auto-rows: 250px;
+          }
         }
       `
     ]
@@ -40,61 +57,26 @@ export default class MenuComponent extends connect(store)(LitElement) {
 
   static get properties() {
     return {
-      _menuId: String,
-      _menus: Array,
-      _currentMenu: Object,
-      columnWidth: Number,
-      columnCount: Number,
-      items: Array,
-      _columnCount: Number,
-      _columns: Array
+      menuId: String,
+      menus: Array,
+      _subMenus: Array,
+      routingTypes: Object
     }
   }
 
   constructor() {
     super()
 
-    this._menus = []
-    this._currentMenu = {
-      children: []
-    }
-
-    this.columnWidth = 320
-    this.maxColumnCount = 5
-    this.columnGap = 5
-    this.itemGap = 5
-    this.items = []
-    this._columnCount = 1
-
-    this._columns = []
-  }
-
-  firstUpdated() {
-    var ro = new ResizeObserver(entries => {
-      for (let entry of entries) {
-        const cr = entry.contentRect
-        this.calculateColumnCount()
-        this.distributeColumnItems()
-      }
-    })
-
-    // Observe one or multiple elements
-    ro.observe(this.shadowRoot.getElementById('main'))
+    this.menus = []
+    this._subMenus = []
   }
 
   render() {
     return html`
-      <style>
-        :host {
-          --menu-list-item-margin: ${this.itemGap}px 0;
-          --menu-list-column-margin: 0 ${this.columnGap}px;
-          --menu-list-column-width: ${this.columnWidth}px;
-        }
-      </style>
       <page-toolbar></page-toolbar>
 
       <ul class="nav">
-        ${this._menus.map(
+        ${this.menus.map(
           (menu, idx) => html`
             <li><a href=${`/${menu.pageName || 'base-menu-main'}/${idx}`}>${menu.name}</a></li>
           `
@@ -102,65 +84,27 @@ export default class MenuComponent extends connect(store)(LitElement) {
       </ul>
 
       <section id="main">
-        ${this._columns.map(
-          c => html`
-            <ul>
-              ${c.map(
-                (item, idx) =>
-                  html`
-                    <li class="${item.class}">
-                      ${c[idx].routingType.toUpperCase() === 'RESOURCE'
-                        ? html`
-                            <a href="/resource-form-main/${c[idx].menuId}">${c[idx].name}</a>
-                          `
-                        : html`
-                            <a href="${c[idx].pageName}">${c[idx].name}</a>
-                          `}
-                    </li>
-                  `
-              )}
-            </ul>
-          `
-        )}
+        <ul>
+          ${(this.menus[this.menuId || 0] || this.menus[0]).children.map(
+            subMenu =>
+              html`
+                <li
+                  class="${subMenu.class}"
+                  style="grid-row: span ${subMenu.routingType.toUpperCase() === 'STATIC' ? 1 : 3}"
+                >
+                  ${subMenu.routingType.toUpperCase() === 'STATIC'
+                    ? html`
+                        <a href="${subMenu.pageName}">${subMenu.name}</a>
+                      `
+                    : html`
+                        <a href="${this.routingTypes[subMenu.routingType]}/${subMenu.menuId}">${subMenu.name}</a>
+                      `}
+                </li>
+              `
+          )}
+        </ul>
       </section>
     `
-  }
-
-  distributeColumnItems() {
-    var columns = []
-
-    this.items.forEach((item, idx) => {
-      if (!columns[idx % this._columnCount]) columns[idx % this._columnCount] = []
-
-      columns[idx % this._columnCount].push(item)
-    })
-
-    this._columns = columns
-    this.requestUpdate()
-  }
-
-  calculateColumnCount() {
-    var mainEl = this.shadowRoot.getElementById('main')
-    if (!mainEl) return
-    this._columnCount = Math.min(
-      Math.floor(mainEl.clientWidth / (this.columnWidth + this.columnGap * 2)),
-      this.maxColumnCount
-    )
-  }
-
-  stateChanged(state) {
-    this._menuId = state.app.resourceId
-    this._menus = state.baseMenu.menus
-    this._currentMenu = this._menus[this._menuId || 0] || {
-      children: []
-    }
-
-    this.items = this._currentMenu.children || []
-    if (this.items.length > 0) {
-      this.items.forEach((item, idx) => (item.class = ['image', 'text'][Math.random() > 0.5 ? 0 : 1])) // TODO: 데이터를 기반으로 클래스를 초기화 하도록 수정
-      this.calculateColumnCount()
-      this.distributeColumnItems()
-    }
   }
 }
 
