@@ -78,7 +78,7 @@ export default class MenuComponent extends LitElement {
       <ul class="nav">
         ${this.menus.map(
           (menu, idx) => html`
-            <li><a href=${`/${menu.pageName || 'base-menu-main'}/${idx}`}>${menu.name}</a></li>
+            <li><a href=${`/${menu.routing || 'base-menu-main'}/${idx}`}>${menu.name}</a></li>
           `
         )}
       </ul>
@@ -90,14 +90,22 @@ export default class MenuComponent extends LitElement {
               html`
                 <li
                   class="${subMenu.class}"
-                  style="grid-row: span ${subMenu.routingType.toUpperCase() === 'STATIC' ? 1 : 3}"
+                  style="grid-row: span ${subMenu.routing_type.toUpperCase() === 'STATIC' ? 1 : 3}"
                 >
-                  ${subMenu.routingType.toUpperCase() === 'STATIC'
+                  ${subMenu.routing_type.toUpperCase() === 'STATIC'
                     ? html`
-                        <a href="${subMenu.pageName}">${subMenu.name}</a>
+                        <a href="${subMenu.routing}">${subMenu.name}</a>
                       `
                     : html`
-                        <a href="${this.routingTypes[subMenu.routingType]}/${subMenu.menuId}">${subMenu.name}</a>
+                        ${subMenu.id_field
+                          ? html`
+                              <a href="${this.routingTypes[subMenu.routing_type]}/${subMenu[subMenu.id_field]}"
+                                >${subMenu.name}</a
+                              >
+                            `
+                          : html`
+                              <a href="${this.routingTypes[subMenu.routing_type]}">${subMenu.name}</a>
+                            `}
                       `}
                 </li>
               `
