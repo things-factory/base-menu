@@ -17,7 +17,7 @@ export default class MenuComponent extends LitElement {
         #main > ul {
           display: grid;
           grid-template-columns: auto auto;
-          grid-auto-rows: 150px;
+          grid-auto-rows: 110px;
           list-style: none;
           padding: 0;
           margin: 0;
@@ -25,56 +25,65 @@ export default class MenuComponent extends LitElement {
         #main > ul > li {
           border: 1px solid #ccc;
           margin: var(--menu-list-item-margin);
-          padding:10px
+          padding: 10px;
         }
-        li.text a{
-          color:#fff;
-          text-decoration:none
+        li.text a {
+          color: #fff;
+          text-decoration: none;
+
+          font-size: 1.5em;
+          word-wrap: break-word;
+          word-break: break-all;
+
+          margin: 0px;
+          display: block;
+          width: 100%;
+          height: 100%;
         }
-        li.text:nth-child(7n+1){
-          background-color:#4397DE
+        li.text:nth-child(7n + 1) {
+          background-color: #4397de;
         }
-        li.text:nth-child(7n+2){
-          background-color:#33B8D0
+        li.text:nth-child(7n + 2) {
+          background-color: #33b8d0;
         }
-        li.text:nth-child(7n+3){
-          background-color:#4AB75F
+        li.text:nth-child(7n + 3) {
+          background-color: #4ab75f;
         }
-        li.text:nth-child(7n+4){
-          background-color:#93796F
+        li.text:nth-child(7n + 4) {
+          background-color: #93796f;
         }
-        li.text:nth-child(7n+5){
-          background-color:#F1AC42
+        li.text:nth-child(7n + 5) {
+          background-color: #f1ac42;
         }
-        li.text:nth-child(7n+6){
-          background-color:#EA6361
+        li.text:nth-child(7n + 6) {
+          background-color: #ea6361;
         }
-        li.text:nth-child(7n+7){
-          background-color:#7386C3
+        li.text:nth-child(7n + 7) {
+          background-color: #7386c3;
         }
 
         @media (min-width: 600px) {
           #main > ul {
             grid-template-columns: auto auto auto;
-            grid-auto-rows: 200px;
+            grid-auto-rows: 120px;
           }
         }
         @media (min-width: 1200px) {
           #main > ul {
             grid-template-columns: auto auto auto auto;
-            grid-auto-rows: 225px;
+            grid-auto-rows: 130px;
           }
         }
         @media (min-width: 1800px) {
           #main > ul {
             grid-template-columns: auto auto auto auto auto;
-            grid-auto-rows: 240px;
+            grid-auto-rows: 140px;
           }
         }
         @media (min-width: 2400px) {
           #main > ul {
             grid-template-columns: auto auto auto auto auto auto;
-            grid-auto-rows: 250px;
+            grid-auto-rows: 150px;
           }
         }
       `
@@ -116,7 +125,7 @@ export default class MenuComponent extends LitElement {
               html`
                 <li
                   class="${subMenu.class} text"
-                  style="grid-row: span ${subMenu.routing_type.toUpperCase() === 'STATIC' ? 1 : 3}"
+                  style="grid-row: span ${subMenu.routing_type.toUpperCase() === 'STATIC' ? 1 : 2}"
                 >
                   ${subMenu.routing_type.toUpperCase() === 'STATIC'
                     ? html`
