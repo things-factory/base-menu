@@ -25,6 +25,32 @@ export default class MenuComponent extends LitElement {
         #main > ul > li {
           border: 1px solid #ccc;
           margin: var(--menu-list-item-margin);
+          padding:10px
+        }
+        li.text a{
+          color:#fff;
+          text-decoration:none
+        }
+        li.text:nth-child(7n+1){
+          background-color:#4397DE
+        }
+        li.text:nth-child(7n+2){
+          background-color:#33B8D0
+        }
+        li.text:nth-child(7n+3){
+          background-color:#4AB75F
+        }
+        li.text:nth-child(7n+4){
+          background-color:#93796F
+        }
+        li.text:nth-child(7n+5){
+          background-color:#F1AC42
+        }
+        li.text:nth-child(7n+6){
+          background-color:#EA6361
+        }
+        li.text:nth-child(7n+7){
+          background-color:#7386C3
         }
 
         @media (min-width: 600px) {
@@ -89,7 +115,7 @@ export default class MenuComponent extends LitElement {
             subMenu =>
               html`
                 <li
-                  class="${subMenu.class}"
+                  class="${subMenu.class} text"
                   style="grid-row: span ${subMenu.routing_type.toUpperCase() === 'STATIC' ? 1 : 3}"
                 >
                   ${subMenu.routing_type.toUpperCase() === 'STATIC'
