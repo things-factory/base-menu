@@ -1,9 +1,10 @@
-import { store } from '@things-factory/shell'
 import { html, LitElement } from 'lit-element'
 import { connect } from 'pwa-helpers/connect-mixin.js'
+import { store, PageView } from '@things-factory/shell'
+
 import '../components/menu'
 
-class BaseMenuMain extends connect(store)(LitElement) {
+class BaseMenuMain extends connect(store)(PageView) {
   static get properties() {
     return {
       menuId: String,
