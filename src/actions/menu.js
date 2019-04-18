@@ -1,8 +1,8 @@
-export const UPDATE_BASE_MENU = 'UPDATE_BASE_MENU'
+export const UPDATE_MENU = 'UPDATE_MENU'
 export const ADD_ROUTING_TYPE = 'ADD_ROUTING_TYPE'
 
-export const updateBaseMenu = menus => {
-  return { type: UPDATE_BASE_MENU, menus }
+export const updateMenu = menus => {
+  return { type: UPDATE_MENU, menus }
 }
 
 export const addRoutingType = (routingType, page) => {

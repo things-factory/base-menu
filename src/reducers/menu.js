@@ -1,4 +1,4 @@
-import { UPDATE_BASE_MENU, ADD_ROUTING_TYPE } from '../actions/main'
+import { UPDATE_MENU, ADD_ROUTING_TYPE } from '../actions/menu'
 
 const INITIAL_STATE = {
   menus: [],
@@ -7,9 +7,9 @@ const INITIAL_STATE = {
   }
 }
 
-const main = (state = INITIAL_STATE, action) => {
+const menu = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case UPDATE_BASE_MENU:
+    case UPDATE_MENU:
       return {
         ...state,
         menus: action.menus
@@ -29,4 +29,4 @@ const main = (state = INITIAL_STATE, action) => {
   }
 }
 
-export default main
+export default menu
