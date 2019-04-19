@@ -2,9 +2,7 @@ import { UPDATE_MENU, ADD_ROUTING_TYPE } from '../actions/menu'
 
 const INITIAL_STATE = {
   menus: [],
-  routingTypes: {
-    RESOURCE: 'resource-form-main'
-  }
+  routingTypes: {}
 }
 
 const menu = (state = INITIAL_STATE, action) => {
