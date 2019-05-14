@@ -22,8 +22,6 @@ export class SeedMenu1556860982110 implements MigrationInterface {
         })
         let foundMenu: Menu = await repository.findOne({ name: menu.name })
 
-        console.log('00000000000000000000000', foundMenu.domain)
-
         await repository.save({
           name: `${menu.name} children`,
           domain,
