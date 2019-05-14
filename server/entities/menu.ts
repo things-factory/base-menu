@@ -2,6 +2,7 @@ import { Column, Entity, Index, ManyToOne, OneToMany, PrimaryGeneratedColumn } f
 import { Domain, DomainBaseEntity } from '@things-factory/shell'
 import { MenuButton } from './menu-button'
 import { MenuColumn } from './menu-column'
+import { MenuDetail } from './menu-detail'
 
 @Entity('menus')
 @Index('ix_menu_0', (menu: Menu) => [menu.domain, menu.name], { unique: true })
@@ -13,7 +14,7 @@ export class Menu extends DomainBaseEntity {
 
   @ManyToOne(type => Domain)
   domain: Domain
-  
+
   @Column('text', {
     unique: true
   })
