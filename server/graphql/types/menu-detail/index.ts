@@ -18,8 +18,8 @@ export const Mutation = `
 `
 
 export const Query = `
-  menus: [MenuDetail]
-  menu(name: String!): MenuDetail
+  menuDetails: [MenuDetail]
+  menuDetail(name: String!): MenuDetail
 `
 
 export const Types = [MenuDetail, NewMenuDetail, MenuDetailPatch]

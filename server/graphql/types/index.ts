@@ -19,7 +19,7 @@ export const mutations = [
   Menu.Mutation,
   MenuButton.Mutation,
   MenuColumn.Mutation,
-  MenuColumn.Mutation,
+  MenuDetail.Mutation,
   MenuDetailColumn.Mutation,
   MenuDetailButton.Mutation
 ]
@@ -28,7 +28,7 @@ export const types = [
   ...Menu.Types,
   ...MenuButton.Types,
   ...MenuColumn.Types,
-  ...MenuColumn.Types,
+  ...MenuDetail.Types,
   ...MenuDetailColumn.Types,
   ...MenuDetailButton.Types
 ]
