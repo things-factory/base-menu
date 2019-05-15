@@ -11,11 +11,13 @@ export class MenuButton extends DomainBaseEntity {
 
   @ManyToOne(type => Domain)
   domain: Domain
-  
+
   @ManyToOne(Type => Menu, menu => menu.buttons)
   menu: Menu
 
-  @Column('int')
+  @Column('int', {
+    nullable: true
+  })
   rank: number
 
   @Column('text', {

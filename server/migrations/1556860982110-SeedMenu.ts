@@ -1,12 +1,7 @@
 import { MigrationInterface, QueryRunner, getRepository } from 'typeorm'
 import { Domain } from '@things-factory/shell'
 import { Menu } from '../entities'
-
-const SEED_MENUS = [
-  {
-    name: 'System'
-  }
-]
+import { MENUS as SEED_MENUS } from '../seed-data/menus'
 
 export class SeedMenu1556860982110 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
@@ -15,17 +10,18 @@ export class SeedMenu1556860982110 implements MigrationInterface {
     const domain = await domainRepository.findOne({ name: 'SYSTEM' })
 
     try {
-      SEED_MENUS.forEach(async menu => {
-        await repository.save({
-          ...menu,
-          domain
-        })
-        let foundMenu: Menu = await repository.findOne({ name: menu.name })
+      SEED_MENUS.forEach(async menus => {
+        const groupMenu = { ...menus }
+        delete groupMenu.childrens
 
-        await repository.save({
-          name: `${menu.name} children`,
-          domain,
-          parent: foundMenu
+        const parent = await repository.save({ ...groupMenu, domain })
+
+        menus.childrens.forEach(async menu => {
+          await repository.save({
+            ...menu,
+            domain,
+            parent
+          })
         })
       })
     } catch (e) {
