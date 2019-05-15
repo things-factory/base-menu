@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/menu-base",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -8,7 +8,7 @@
   "author": "",
   "scripts": {
     "serve": "things-factory",
-    "serve:dev": "tsc && things-factory-dev",
+    "serve:dev": "npm run clean && tsc && things-factory-dev",
     "build:client": "webpack --config node_modules/@things-factory/shell/webpack.config.js",
     "build:server": "tsc",
     "clean": "rm -rf dist-server dist-client",
