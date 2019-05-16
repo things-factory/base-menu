@@ -16,6 +16,7 @@ async function getMenus() {
             name
             routingType
             idField
+            resourceName
           }
         }
       }
