@@ -1,8 +1,7 @@
-import { Column, Entity, Index, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm'
 import { Domain, DomainBaseEntity } from '@things-factory/shell'
+import { Column, Entity, Index, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm'
 import { MenuButton } from './menu-button'
 import { MenuColumn } from './menu-column'
-import { MenuDetail } from './menu-detail'
 
 @Entity('menus')
 @Index('ix_menu_0', (menu: Menu) => [menu.domain, menu.name], { unique: true })

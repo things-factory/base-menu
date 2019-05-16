@@ -20,6 +20,7 @@ export const Mutation = `
 export const Query = `
   menus: [Menu]
   menu(name: String!): Menu
+  userMenus: [Menu]
 `
 
 export const Types = [Menu, NewMenu, MenuPatch]
