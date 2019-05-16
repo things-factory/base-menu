@@ -20,8 +20,12 @@
     "migration:revert": "node ./node_modules/typeorm/cli.js migration:revert"
   },
   "dependencies": {
+    "@things-factory/provider-base-gql": "*",
     "@things-factory/shell": "*",
     "pwa-helpers": "^0.9.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@things-factory/menu-ui": "*",
+    "@things-factory/resource-ui-mobile": "*"
+  }
 }

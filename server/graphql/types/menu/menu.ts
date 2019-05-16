@@ -5,6 +5,11 @@ export const Menu = gql`
     id: String
     domain: Domain
     name: String
+    routing: String
+    routingType: String
+    idField: String
+    title: String
+    hiddenFlag: Boolean
     children: [Menu]
     buttons: [MenuButton]
     columns: [MenuColumn]
