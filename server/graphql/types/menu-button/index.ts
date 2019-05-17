@@ -18,7 +18,7 @@ export const Mutation = `
 `
 
 export const Query = `
-  menuButtons: [MenuButton]
+  menuButtons(menuId: String): [MenuButton]
   menuButton(name: String!): MenuButton
 `
 

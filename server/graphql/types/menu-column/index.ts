@@ -18,7 +18,7 @@ export const Mutation = `
 `
 
 export const Query = `
-  menuColumns: [MenuColumn]
+  menuColumns(menuId: String): [MenuColumn]
   menuColumn(name: String!): MenuColumn
 `
 
