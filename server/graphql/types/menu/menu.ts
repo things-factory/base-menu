@@ -8,6 +8,7 @@ export const Menu = gql`
     routing: String
     routingType: String
     resourceType: String
+    resourceUrl: String
     resourceName: String
     idField: String
     title: String
