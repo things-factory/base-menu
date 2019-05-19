@@ -1,5 +1,4 @@
-import { store } from '@things-factory/shell'
-import { client } from '@things-factory/provider-base-gql'
+import { store, client } from '@things-factory/shell'
 import gql from 'graphql-tag'
 import menu from './reducers/menu'
 import { updateMenu } from './actions/menu'
