@@ -4,14 +4,14 @@ import { Menu } from './menu'
 
 @Entity('menu-columns')
 @Index('ix_menu_column_0', (menuColumn: MenuColumn) => [menuColumn.menu, menuColumn.name], { unique: true })
-@Index('ix_menu_column_1', (menuColumn: MenuColumn) => [menuColumn.menu, menuColumn.rank], { unique: true })
+@Index('ix_menu_column_1', (menuColumn: MenuColumn) => [menuColumn.menu, menuColumn.rank])
 export class MenuColumn extends DomainBaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
   @ManyToOne(type => Domain)
   domain: Domain
-  
+
   @ManyToOne(type => Menu, menu => menu.columns)
   menu: Menu
 
