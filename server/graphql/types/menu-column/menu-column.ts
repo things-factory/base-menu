@@ -17,7 +17,7 @@ export const MenuColumn = gql`
     searchRank: Int
     sortRank: Int
     searchEditor: String
-    searchOperator: String
+    searchOper: String
     searchInitVal: String
     gridRank: Int
     gridEditor: String
