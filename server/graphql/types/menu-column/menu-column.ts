@@ -16,6 +16,7 @@ export const MenuColumn = gql`
     refRelated: String
     searchRank: Int
     sortRank: Int
+    reverseSort: Boolean
     searchEditor: String
     searchOper: String
     searchInitVal: String
