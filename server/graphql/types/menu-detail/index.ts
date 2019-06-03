@@ -1,6 +1,8 @@
+import { Filter, Pagination, Sorting } from '@things-factory/shell'
 import { MenuDetail } from './menu-detail'
-import { NewMenuDetail } from './new-menu-detail'
+import { MenuDetailList } from './menu-detail-list'
 import { MenuDetailPatch } from './menu-detail-patch'
+import { NewMenuDetail } from './new-menu-detail'
 
 export const Mutation = `
   createMenuDetail (
@@ -18,8 +20,8 @@ export const Mutation = `
 `
 
 export const Query = `
-  menuDetails: [MenuDetail]
+  menuDetails(filters: [Filter], pagination: Pagination, sortings: [Sorting]): MenuDetailList
   menuDetail(name: String!): MenuDetail
 `
 
-export const Types = [MenuDetail, NewMenuDetail, MenuDetailPatch]
+export const Types = [Filter, Pagination, Sorting, MenuDetail, NewMenuDetail, MenuDetailPatch, MenuDetailList]

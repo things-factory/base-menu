@@ -1,6 +1,8 @@
 import { Menu } from './menu'
 import { NewMenu } from './new-menu'
 import { MenuPatch } from './menu-patch'
+import { MenuList } from './menu-list'
+import { Filter, Pagination, Sorting } from '@things-factory/shell'
 
 export const Mutation = `
   createMenu (
@@ -18,9 +20,9 @@ export const Mutation = `
 `
 
 export const Query = `
-  menus: [Menu]
+  menus(filters: [Filter], pagination: Pagination, sortings: [Sorting]): MenuList
   menu(name: String id: String): Menu
   userMenus: [Menu]
 `
 
-export const Types = [Menu, NewMenu, MenuPatch]
+export const Types = [Filter, Pagination, Sorting, Menu, NewMenu, MenuPatch, MenuList]
