@@ -12,6 +12,7 @@ export const Menu = gql`
     resourceName: String
     idField: String
     title: String
+    template: String
     hiddenFlag: Boolean
     children: [Menu]
     buttons: [MenuButton]
