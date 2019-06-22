@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/menu-base",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -26,7 +26,6 @@
     "@things-factory/shell": "*"
   },
   "devDependencies": {
-    "@things-factory/menu-ui": "*",
-    "@things-factory/resource-ui": "*"
+    "@things-factory/tester": "*"
   }
 }

@@ -1,36 +1,8 @@
-import { store, client } from '@things-factory/shell'
-import gql from 'graphql-tag'
+import { store } from '@things-factory/shell'
 import menu from './reducers/menu'
-import { updateMenu } from './actions/menu'
 
-async function getMenus() {
-  const response = await client.query({
-    query: gql`
-      query {
-        menus: userMenus {
-          id
-          name
-          children {
-            id
-            name
-            routingType
-            idField
-            resourceName
-            template
-          }
-        }
-      }
-    `
-  })
-
-  return response.data.menus
-}
-
-export default async function bootstrap() {
+export default function bootstrap() {
   store.addReducers({
     menu
   })
-
-  const menus = await getMenus()
-  store.dispatch(updateMenu(menus))
 }
