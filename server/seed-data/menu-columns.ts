@@ -1344,6 +1344,8 @@ export const MENU_COLUMNS = [
   },
   {
     nullable: false,
+    refType: 'Entity',
+    refName: 'Domain',
     sortRank: 0,
     gridRank: 0,
     virtualField: false,
@@ -1447,6 +1449,7 @@ export const MENU_COLUMNS = [
   },
   {
     nullable: true,
+    refType: 'Entity',
     sortRank: 0,
     gridRank: 0,
     virtualField: false,
@@ -1741,6 +1744,7 @@ export const MENU_COLUMNS = [
   },
   {
     nullable: true,
+    refType: 'Entity',
     virtualField: false,
     reverseSort: false,
     searchRank: 0,
@@ -2175,6 +2179,7 @@ export const MENU_COLUMNS = [
     gridWidth: 0
   },
   {
+    refType: 'Entity',
     nullable: false,
     sortRank: 0,
     gridRank: 0,
@@ -3620,6 +3625,7 @@ export const MENU_COLUMNS = [
   },
   {
     nullable: false,
+    refType: 'Entity',
     sortRank: 0,
     gridRank: 0,
     virtualField: false,
