@@ -21,7 +21,7 @@ export const Mutation = `
 
 export const Query = `
   menus(filters: [Filter], pagination: Pagination, sortings: [Sorting]): MenuList
-  menu(name: String id: String): Menu
+  menu(name: String): Menu
   userMenus: [Menu]
 `
 

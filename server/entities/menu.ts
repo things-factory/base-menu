@@ -1,3 +1,4 @@
+import { User } from '@things-factory/auth-base'
 import { Domain, DomainBaseEntity } from '@things-factory/shell'
 import { Column, Entity, Index, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm'
 import { MenuButton } from './menu-button'
@@ -24,11 +25,11 @@ export class Menu extends DomainBaseEntity {
   })
   description: string
 
-  @ManyToOne(type => Menu, parent => parent.children, { nullable: true })
+  @ManyToOne(type => Menu, parent => parent.childrens, { nullable: true })
   parent: Menu
 
   @OneToMany(type => Menu, child => child.parent)
-  children: Menu[]
+  childrens: Menu[]
 
   @Column('text', {
     nullable: true
@@ -135,4 +136,10 @@ export class Menu extends DomainBaseEntity {
 
   @OneToMany(type => MenuColumn, menuColumn => menuColumn.menu)
   columns: MenuColumn[]
+
+  @ManyToOne(type => User)
+  creator: User
+
+  @ManyToOne(type => User)
+  updater: User
 }

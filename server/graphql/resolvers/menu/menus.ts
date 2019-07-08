@@ -6,7 +6,15 @@ export const menusResolver = {
   async menus(_: any, params: ListParam, context: any) {
     const queryBuilder = getRepository(Menu).createQueryBuilder()
     buildQuery(queryBuilder, params)
-    const [items, total] = await queryBuilder.getManyAndCount()
+    const [items, total] = await queryBuilder
+      .leftJoinAndSelect('Menu.domain', 'Domain')
+      .leftJoinAndSelect('Menu.parent', 'Parent')
+      .leftJoinAndSelect('Menu.childrens', 'Childrens')
+      .leftJoinAndSelect('Menu.buttons', 'Buttons')
+      .leftJoinAndSelect('Menu.columns', 'Columns')
+      .leftJoinAndSelect('Menu.creator', 'Creator')
+      .leftJoinAndSelect('Menu.updater', 'Updater')
+      .getManyAndCount()
 
     return { items, total }
   }

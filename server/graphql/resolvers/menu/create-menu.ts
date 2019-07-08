@@ -1,16 +1,13 @@
-import uuid from 'uuid/v4'
-
 import { getRepository } from 'typeorm'
 import { Menu } from '../../../entities'
 
 export const createMenu = {
-  async createMenu(_, { menu: attrs }) {
-    const repository = getRepository(Menu)
-    const newMenu = {
-      id: uuid(),
-      ...attrs
-    }
-
-    return await repository.save(newMenu)
+  async createMenu(_: any, { menu }, context: any) {
+    return await getRepository(Menu).save({
+      domain: context.domain,
+      creatorId: context.state.user.id,
+      updaterId: context.state.user.id,
+      ...menu
+    })
   }
 }

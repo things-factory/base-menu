@@ -1744,7 +1744,6 @@ export const MENU_COLUMNS = [
   },
   {
     nullable: true,
-    refType: 'Entity',
     virtualField: false,
     reverseSort: false,
     searchRank: 0,

@@ -10,7 +10,7 @@ export const MENUS = [
     childrens: [
       {
         template: 'things-base-terminology',
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 0,
         hiddenFlag: false,
         pagination: true,
@@ -31,7 +31,7 @@ export const MENUS = [
       },
       {
         template: 'things-base-menu',
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 3,
         hiddenFlag: false,
         pagination: true,
@@ -51,7 +51,7 @@ export const MENUS = [
         resourceType: 'ENTITY'
       },
       {
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 0,
         hiddenFlag: false,
         pagination: true,
@@ -71,7 +71,7 @@ export const MENUS = [
         resourceType: 'ENTITY'
       },
       {
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 0,
         hiddenFlag: false,
         pagination: true,
@@ -93,7 +93,7 @@ export const MENUS = [
       },
       {
         template: 'things-system-user',
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 0,
         hiddenFlag: false,
         pagination: true,
@@ -115,7 +115,7 @@ export const MENUS = [
       },
       {
         template: 'things-system-domain',
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 0,
         hiddenFlag: false,
         pagination: true,
@@ -136,7 +136,7 @@ export const MENUS = [
         resourceType: 'ENTITY'
       },
       {
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 4,
         hiddenFlag: false,
         pagination: true,
@@ -155,7 +155,7 @@ export const MENUS = [
         resourceType: 'ENTITY'
       },
       {
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 4,
         hiddenFlag: false,
         pagination: true,
@@ -174,7 +174,7 @@ export const MENUS = [
         resourceType: 'ENTITY'
       },
       {
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 4,
         hiddenFlag: false,
         pagination: true,
@@ -194,7 +194,7 @@ export const MENUS = [
       },
       {
         template: 'things-base-common-code',
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 0,
         hiddenFlag: false,
         pagination: true,
@@ -225,7 +225,7 @@ export const MENUS = [
     category: 'STANDARD',
     childrens: [
       {
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 4,
         hiddenFlag: false,
         pagination: true,
@@ -245,7 +245,7 @@ export const MENUS = [
       },
       {
         template: 'things-system-data-src',
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 4,
         hiddenFlag: false,
         pagination: true,
@@ -265,7 +265,7 @@ export const MENUS = [
         resourceType: 'ENTITY'
       },
       {
-        idField: 'id',
+        idField: 'name',
         fixedColumns: 4,
         hiddenFlag: false,
         pagination: true,

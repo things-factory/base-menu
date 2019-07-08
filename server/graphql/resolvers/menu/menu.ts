@@ -2,17 +2,10 @@ import { getRepository } from 'typeorm'
 import { Menu } from '../../../entities'
 
 export const menuResolver = {
-  async menu(_, { name, id }, context, info) {
-    const repository = getRepository(Menu)
-    const domain = context.domain
-    const where: any = {}
-    if (domain) where.domain = domain
-    if (name) where.name = name
-    if (id) where.id = id
-
-    return await repository.findOne({
-      where,
-      relations: ['domain', 'parent', 'children', 'buttons', 'columns']
+  async menu(_: any, { name }, context: any) {
+    return await getRepository(Menu).findOne({
+      where: { domain: context.domain, name },
+      relations: ['domain', 'parent', 'childrens', 'buttons', 'columns', 'creator', 'updater']
     })
   }
 }
