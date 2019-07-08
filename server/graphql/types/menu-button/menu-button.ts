@@ -4,9 +4,15 @@ export const MenuButton = gql`
   type MenuButton {
     id: String
     domain: Domain
-    rank: Int
-    text: String
     menu: Menu
+    rank: Int
+    style: String
+    icon: String
+    text: String
+    auth: String
+    logic: String
+    creator: User
+    updater: User
     createdAt: String
     updatedAt: String
   }

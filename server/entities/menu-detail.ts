@@ -1,8 +1,9 @@
+import { User } from '@things-factory/auth-base'
 import { Domain, DomainBaseEntity } from '@things-factory/shell'
 import { Column, Entity, Index, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm'
 import { Menu } from './menu'
-import { MenuDetailColumn } from './menu-detail-column'
 import { MenuDetailButton } from './menu-detail-button'
+import { MenuDetailColumn } from './menu-detail-column'
 
 @Entity('menu-details')
 @Index('ix_menu_detail_0', (menuDetail: MenuDetail) => [menuDetail.menu, menuDetail.name], { unique: true })
@@ -64,4 +65,10 @@ export class MenuDetail extends DomainBaseEntity {
 
   @OneToMany(type => MenuDetailButton, menuDetailButton => menuDetailButton.menuDetail)
   buttons: MenuDetailButton[]
+
+  @ManyToOne(type => User)
+  creator: User
+
+  @ManyToOne(type => User)
+  updater: User
 }

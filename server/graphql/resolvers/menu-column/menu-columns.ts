@@ -1,19 +1,18 @@
-import { getRepository } from 'typeorm'
+import { buildQuery, ListParam } from '@things-factory/shell'
 import { MenuColumn } from '../../../entities'
+import { getRepository } from 'typeorm'
 
 export const menuColumnsResolver = {
-  async menuColumns(_, { menuId }, context) {
-    const repository = getRepository(MenuColumn)
-    const where: any = {}
-    const domain = context.domain
-    if (menuId) where.menu = menuId
-    if (domain) where.domain = domain
+  async menuColumns(_: any, params: ListParam) {
+    const queryBuilder = getRepository(MenuColumn).createQueryBuilder()
+    buildQuery(queryBuilder, params)
+    const [items, total] = await queryBuilder
+      .leftJoinAndSelect('MenuColumn.domain', 'Domain')
+      .leftJoinAndSelect('MenuColumn.menu', 'Menu')
+      .leftJoinAndSelect('MenuColumn.creator', 'Creator')
+      .leftJoinAndSelect('MenuColumn.updater', 'Updater')
+      .getManyAndCount()
 
-    return await repository.find({
-      where,
-      order: {
-        rank: 'ASC'
-      }
-    })
+    return { items, total }
   }
 }

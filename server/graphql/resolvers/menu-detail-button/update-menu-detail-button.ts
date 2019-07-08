@@ -1,20 +1,22 @@
 import { getRepository } from 'typeorm'
-import { MenuDetailButton } from '../../../entities'
+import { MenuDetail, MenuDetailButton } from '../../../entities'
 
 export const updateMenuDetailButton = {
-  async updateMenuDetailButton(_, { id, patch }) {
+  async updateMenuDetailButton(_: any, { id, patch }, context: any) {
     const repository = getRepository(MenuDetailButton)
+    const menuDetailButton = await repository.findOne({
+      where: { id },
+      relations: ['menuDetail']
+    })
 
-    const menuDetailButton = await repository.findOne(
-      {
-        id
-      },
-      { relations: ['menuDetail'] }
-    )
+    if (patch.menuDetail) {
+      patch.menuDetail = await getRepository(MenuDetail).findOne({ where: { id: patch.menuDetail } })
+    }
 
     return await repository.save({
       ...menuDetailButton,
-      ...patch
+      ...patch,
+      updaterId: context.state.user.id
     })
   }
 }

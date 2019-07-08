@@ -1,6 +1,7 @@
-import { Entity, Column, Index, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
-import { Menu } from './menu'
+import { User } from '@things-factory/auth-base'
 import { Domain, DomainBaseEntity } from '@things-factory/shell'
+import { Column, Entity, Index, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
+import { Menu } from './menu'
 
 @Entity('menu-buttons')
 @Index('ix_menu_button_0', (menuButton: MenuButton) => [menuButton.menu, menuButton.text], { unique: true })
@@ -42,4 +43,10 @@ export class MenuButton extends DomainBaseEntity {
     nullable: true
   })
   logic: string
+
+  @ManyToOne(type => User)
+  creator: User
+
+  @ManyToOne(type => User)
+  updater: User
 }

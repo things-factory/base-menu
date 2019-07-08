@@ -1,6 +1,7 @@
 import { Domain, DomainBaseEntity } from '@things-factory/shell'
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Index } from 'typeorm'
 import { MenuDetail } from './menu-detail'
+import { User } from '@things-factory/auth-base'
 
 @Entity('menu-detail-columns')
 @Index(
@@ -187,4 +188,10 @@ export class MenuDetailColumn extends DomainBaseEntity {
     nullable: true
   })
   extField: boolean
+
+  @ManyToOne(type => User)
+  creator: User
+
+  @ManyToOne(type => User)
+  updater: User
 }

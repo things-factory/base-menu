@@ -1,16 +1,14 @@
-import uuid from 'uuid/v4'
-
 import { getRepository } from 'typeorm'
-import { MenuColumn } from '../../../entities'
+import { Menu, MenuColumn } from '../../../entities'
 
 export const createMenuColumn = {
-  async createMenuColumn(_, { menuColumn: attrs }) {
-    const repository = getRepository(MenuColumn)
-    const newMenuColumn = {
-      id: uuid(),
-      ...attrs
-    }
-
-    return await repository.save(newMenuColumn)
+  async createMenuColumn(_: any, { menuColumn }, context: any) {
+    return await getRepository(MenuColumn).save({
+      domain: context.domain,
+      ...menuColumn,
+      menu: await getRepository(Menu).findOne({ where: { domain: context.domain, id: menuColumn.menu } }),
+      creatorId: context.state.user.id,
+      updaterId: context.state.user.id
+    })
   }
 }

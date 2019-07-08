@@ -2,9 +2,7 @@ import { getRepository } from 'typeorm'
 import { MenuButton } from '../../../entities'
 
 export const deleteMenuButton = {
-  async deleteMenuButton(_, { id }) {
-    const repository = getRepository(MenuButton)
-
-    return await repository.delete(id)
+  async deleteMenuButton(_: any, { id }, context: any) {
+    return await getRepository(MenuButton).delete({ domain: context.domain, id })
   }
 }

@@ -4,19 +4,25 @@ export const MenuColumn = gql`
   type MenuColumn {
     id: String
     domain: Domain
+    menu: Menu
     name: String
     description: String
+    rank: Int
     term: String
     colType: String
-    colSize: String
+    colSize: Int
     nullable: Boolean
     refType: String
     refName: String
     refUrl: String
+    refParams: String
     refRelated: String
     searchRank: Int
     sortRank: Int
     reverseSort: Boolean
+    virtualField: Boolean
+    extField: Boolean
+    searchName: String
     searchEditor: String
     searchOper: String
     searchInitVal: String
@@ -24,15 +30,17 @@ export const MenuColumn = gql`
     gridEditor: String
     gridFormat: String
     gridValidator: String
-    gridWidth: String
+    gridWidth: Int
     gridAlign: String
+    uniqRank: Int
     formEditor: String
     formValidator: String
     formFormat: String
     defVal: String
     rangeVal: String
     ignoreOnSave: Boolean
-    menu: Menu
+    creator: User
+    updater: User
     createdAt: String
     updatedAt: String
   }

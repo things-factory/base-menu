@@ -2,16 +2,10 @@ import { getRepository } from 'typeorm'
 import { MenuDetailColumn } from '../../../entities'
 
 export const menuDetailColumnResolver = {
-  async menuDetailColumn(_, { id }, context, info) {
-    const repository = getRepository(MenuDetailColumn)
-
-    return await repository.findOne(
-      {
-        id
-      },
-      {
-        relations: ['menuDetail']
-      }
-    )
+  async menuDetailColumn(_: any, { id }) {
+    return await getRepository(MenuDetailColumn).findOne({
+      where: { id },
+      relations: ['domain', 'menuDetail', 'creator', 'updater']
+    })
   }
 }

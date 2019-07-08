@@ -4,10 +4,19 @@ export const MenuDetail = gql`
   type MenuDetail {
     id: String
     domain: Domain
+    menu: Menu
     name: String
-    buttons: [MenuDetailButton]
+    viewSection: String
+    entityId: String
+    dataProp: String
+    association: String
+    searchUrl: String
+    saveUrl: String
+    masterField: String
+    customView: String
     columns: [MenuDetailColumn]
-    createdAt: String
-    updatedAt: String
+    buttons: [MenuDetailButton]
+    creator: User
+    updater: User
   }
 `

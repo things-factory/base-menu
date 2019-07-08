@@ -1,6 +1,8 @@
 import { MenuButton } from './menu-button'
 import { NewMenuButton } from './new-menu-button'
 import { MenuButtonPatch } from './menu-button-patch'
+import { MenuButtonList } from './menu-button-list'
+import { Filter, Pagination, Sorting } from '@things-factory/shell'
 
 export const Mutation = `
   createMenuButton (
@@ -8,18 +10,18 @@ export const Mutation = `
   ): MenuButton
 
   updateMenuButton (
-    name: String!
+    id: String!
     patch: MenuButtonPatch!
   ): MenuButton
 
   deleteMenuButton (
-    name: String!
+    id: String!
   ): MenuButton
 `
 
 export const Query = `
-  menuButtons(menuId: String): [MenuButton]
-  menuButton(name: String!): MenuButton
+  menuButtons(filters: [Filter], pagination: Pagination, sortings: [Sorting]): MenuButtonList
+  menuButton(id: String!): MenuButton
 `
 
-export const Types = [MenuButton, NewMenuButton, MenuButtonPatch]
+export const Types = [Filter, Pagination, Sorting, MenuButton, NewMenuButton, MenuButtonPatch, MenuButtonList]

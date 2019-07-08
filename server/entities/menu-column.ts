@@ -1,5 +1,6 @@
-import { Column, Entity, Index, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
+import { User } from '@things-factory/auth-base'
 import { Domain, DomainBaseEntity } from '@things-factory/shell'
+import { Column, Entity, Index, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
 import { Menu } from './menu'
 
 @Entity('menu-columns')
@@ -178,4 +179,10 @@ export class MenuColumn extends DomainBaseEntity {
     default: false
   })
   ignoreOnSave: boolean
+
+  @ManyToOne(type => User)
+  creator: User
+
+  @ManyToOne(type => User)
+  updater: User
 }

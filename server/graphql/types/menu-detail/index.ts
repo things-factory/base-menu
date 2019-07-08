@@ -6,7 +6,7 @@ import { NewMenuDetail } from './new-menu-detail'
 
 export const Mutation = `
   createMenuDetail (
-    menu: NewMenuDetail!
+    menuDetail: NewMenuDetail!
   ): MenuDetail
 
   updateMenuDetail (
