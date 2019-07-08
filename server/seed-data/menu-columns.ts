@@ -14,7 +14,7 @@ export const MENU_COLUMNS = [
     menuName: 'Code',
     rank: 10,
     extField: false,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -34,7 +34,7 @@ export const MENU_COLUMNS = [
     menuName: 'Code',
     rank: 20,
     extField: false,
-    term: 'label.domain',
+    term: 'field.domain',
     refName: 'Domain',
     gridWidth: 0,
     formEditor: 'hidden'
@@ -52,7 +52,7 @@ export const MENU_COLUMNS = [
     menuName: 'Code',
     rank: 30,
     extField: false,
-    term: 'label.name',
+    term: 'field.name',
     sortRank: 10,
     gridRank: 20,
     colSize: 64,
@@ -74,7 +74,7 @@ export const MENU_COLUMNS = [
     menuName: 'Code',
     rank: 40,
     extField: false,
-    term: 'label.description',
+    term: 'field.description',
     sortRank: 0,
     gridRank: 30,
     colSize: 255,
@@ -102,7 +102,7 @@ export const MENU_COLUMNS = [
     menuName: 'Code',
     rank: 50,
     extField: false,
-    term: 'label.bundle',
+    term: 'field.bundle',
     refName: 'BUNDLE',
     gridWidth: 100,
     formEditor: 'code-combo'
@@ -119,7 +119,7 @@ export const MENU_COLUMNS = [
     menuName: 'Code',
     rank: 60,
     extField: false,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     sortRank: 0,
     gridRank: 0,
@@ -140,7 +140,7 @@ export const MENU_COLUMNS = [
     menuName: 'Code',
     rank: 70,
     extField: false,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     sortRank: 0,
     gridRank: 40,
@@ -164,7 +164,7 @@ export const MENU_COLUMNS = [
     menuName: 'Code',
     rank: 80,
     extField: false,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -182,7 +182,7 @@ export const MENU_COLUMNS = [
     menuName: 'Code',
     rank: 90,
     extField: false,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     gridWidth: 135
   },
   {
@@ -200,7 +200,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 10,
     extField: false,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -220,7 +220,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 20,
     extField: false,
-    term: 'label.domain',
+    term: 'field.domain',
     refName: 'Domain',
     gridWidth: 0,
     formEditor: 'hidden'
@@ -243,7 +243,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 30,
     extField: false,
-    term: 'label.name',
+    term: 'field.name',
     gridWidth: 200,
     formEditor: 'text'
   },
@@ -265,7 +265,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 40,
     extField: false,
-    term: 'label.description',
+    term: 'field.description',
     gridWidth: 250,
     formEditor: 'text'
   },
@@ -288,7 +288,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 50,
     extField: false,
-    term: 'label.type',
+    term: 'field.type',
     refName: 'DATA_SOURCE_TYPE',
     gridWidth: 80,
     formEditor: 'code-combo'
@@ -309,7 +309,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 60,
     extField: false,
-    term: 'label.url',
+    term: 'field.url',
     gridWidth: 300,
     formEditor: 'text'
   },
@@ -329,7 +329,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 70,
     extField: false,
-    term: 'label.class',
+    term: 'field.class',
     gridWidth: 250,
     formEditor: 'text'
   },
@@ -349,7 +349,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 80,
     extField: false,
-    term: 'label.user',
+    term: 'field.user',
     gridWidth: 100,
     formEditor: 'text'
   },
@@ -369,7 +369,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 90,
     extField: false,
-    term: 'label.password',
+    term: 'field.password',
     gridWidth: 100,
     formEditor: 'text'
   },
@@ -390,7 +390,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 100,
     extField: false,
-    term: 'label.max_active',
+    term: 'field.max_active',
     gridWidth: 100,
     formEditor: 'number'
   },
@@ -411,7 +411,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 110,
     extField: false,
-    term: 'label.max_idle',
+    term: 'field.max_idle',
     gridWidth: 100,
     formEditor: 'number'
   },
@@ -432,7 +432,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 120,
     extField: false,
-    term: 'label.min_idle',
+    term: 'field.min_idle',
     gridWidth: 100,
     formEditor: 'number'
   },
@@ -453,7 +453,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 130,
     extField: false,
-    term: 'label.max_wait',
+    term: 'field.max_wait',
     gridWidth: 100,
     formEditor: 'number'
   },
@@ -474,7 +474,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 140,
     extField: false,
-    term: 'label.evict_time',
+    term: 'field.evict_time',
     gridWidth: 100,
     formEditor: 'number'
   },
@@ -496,7 +496,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 150,
     extField: false,
-    term: 'label.status',
+    term: 'field.status',
     gridWidth: 80,
     formEditor: 'text'
   },
@@ -516,7 +516,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 160,
     extField: false,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     gridWidth: 0
   },
@@ -537,7 +537,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 170,
     extField: false,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     gridWidth: 100
   },
@@ -556,7 +556,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 180,
     extField: false,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -575,7 +575,7 @@ export const MENU_COLUMNS = [
     menuName: 'DataSrc',
     rank: 190,
     extField: false,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     gridWidth: 135
   },
   {
@@ -594,7 +594,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 10,
     extField: false,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0
   },
   {
@@ -614,7 +614,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 20,
     extField: false,
-    term: 'label.name',
+    term: 'field.name',
     gridWidth: 200
   },
   {
@@ -633,7 +633,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 30,
     extField: false,
-    term: 'label.description',
+    term: 'field.description',
     gridWidth: 200
   },
   {
@@ -651,7 +651,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 40,
     extField: false,
-    term: 'label.timezone',
+    term: 'field.timezone',
     gridWidth: 0
   },
   {
@@ -671,7 +671,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 50,
     extField: false,
-    term: 'label.system_flag',
+    term: 'field.system_flag',
     gridWidth: 80,
     formEditor: 'tristate-radio'
   },
@@ -690,7 +690,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 60,
     extField: false,
-    term: 'label.subdomain',
+    term: 'field.subdomain',
     gridWidth: 200
   },
   {
@@ -708,7 +708,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 70,
     extField: false,
-    term: 'label.brand_name',
+    term: 'field.brand_name',
     gridWidth: 200
   },
   {
@@ -727,7 +727,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 80,
     extField: false,
-    term: 'label.brand_image',
+    term: 'field.brand_image',
     gridWidth: 80
   },
   {
@@ -745,7 +745,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 90,
     extField: false,
-    term: 'label.content_image',
+    term: 'field.content_image',
     gridWidth: 200
   },
   {
@@ -765,7 +765,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 100,
     extField: false,
-    term: 'label.theme',
+    term: 'field.theme',
     refName: 'APPLICATION_THEME',
     gridWidth: 230,
     formEditor: 'code-combo'
@@ -786,7 +786,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 110,
     extField: false,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     gridWidth: 0
   },
@@ -807,7 +807,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 120,
     extField: false,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     gridWidth: 100
   },
@@ -826,7 +826,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 130,
     extField: false,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -845,7 +845,7 @@ export const MENU_COLUMNS = [
     menuName: 'Domain',
     rank: 140,
     extField: false,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     gridWidth: 0
   },
   {
@@ -863,7 +863,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 10,
     extField: false,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0,
     formEditor: 'readonly'
   },
@@ -883,7 +883,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 20,
     extField: false,
-    term: 'label.domain',
+    term: 'field.domain',
     refName: 'Domain',
     gridWidth: 0,
     formEditor: 'hidden'
@@ -899,7 +899,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 30,
     extField: false,
-    term: 'label.name',
+    term: 'field.name',
     sortRank: 10,
     gridRank: 20,
     colSize: 64,
@@ -920,7 +920,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 40,
     extField: false,
-    term: 'label.description',
+    term: 'field.description',
     sortRank: 0,
     gridRank: 40,
     colSize: 255,
@@ -943,7 +943,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 50,
     extField: false,
-    term: 'label.bundle',
+    term: 'field.bundle',
     refName: 'BUNDLE',
     sortRank: 0,
     gridRank: 10,
@@ -970,7 +970,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 60,
     extField: false,
-    term: 'label.table_name',
+    term: 'field.table_name',
     gridWidth: 165,
     formEditor: 'text'
   },
@@ -989,7 +989,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 70,
     extField: false,
-    term: 'label.url',
+    term: 'field.url',
     gridWidth: 250,
     formEditor: 'text'
   },
@@ -1008,7 +1008,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 80,
     extField: false,
-    term: 'label.grid_save_url',
+    term: 'field.grid_save_url',
     gridWidth: 350,
     formEditor: 'text'
   },
@@ -1029,7 +1029,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 90,
     extField: false,
-    term: 'label.ext_entity',
+    term: 'field.ext_entity',
     gridWidth: 100,
     formEditor: 'tristate-radio'
   },
@@ -1052,7 +1052,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 100,
     extField: false,
-    term: 'label.id_type',
+    term: 'field.id_type',
     refName: 'ENTITY_ID_TYPE',
     gridWidth: 100,
     formEditor: 'code-combo'
@@ -1072,7 +1072,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 110,
     extField: false,
-    term: 'label.id_field',
+    term: 'field.id_field',
     gridWidth: 70,
     formEditor: 'text'
   },
@@ -1091,7 +1091,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 120,
     extField: false,
-    term: 'label.title_field',
+    term: 'field.title_field',
     gridWidth: 90,
     formEditor: 'text'
   },
@@ -1109,7 +1109,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 130,
     extField: false,
-    term: 'label.parent',
+    term: 'field.parent',
     refName: 'Entity',
     sortRank: 0,
     gridRank: 110,
@@ -1137,7 +1137,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 140,
     extField: false,
-    term: 'label.association',
+    term: 'field.association',
     refName: 'ASSOCIATION',
     gridWidth: 80,
     formEditor: 'code-combo'
@@ -1158,7 +1158,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 150,
     extField: false,
-    term: 'label.ref_name',
+    term: 'field.ref_name',
     gridWidth: 100,
     formEditor: 'text'
   },
@@ -1180,7 +1180,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 160,
     extField: false,
-    term: 'label.del_strategy',
+    term: 'field.del_strategy',
     refName: 'DELETE_STRATEGY',
     gridWidth: 235,
     formEditor: 'code-combo'
@@ -1200,7 +1200,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 170,
     extField: false,
-    term: 'label.data_prop',
+    term: 'field.data_prop',
     gridWidth: 100,
     formEditor: 'text'
   },
@@ -1221,7 +1221,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 180,
     extField: false,
-    term: 'label.fixed_columns',
+    term: 'field.fixed_columns',
     gridWidth: 90,
     formEditor: 'number'
   },
@@ -1243,7 +1243,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 200,
     extField: false,
-    term: 'label.active',
+    term: 'field.active',
     gridWidth: 70,
     formEditor: 'tristate-radio'
   },
@@ -1263,7 +1263,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 210,
     extField: false,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     gridWidth: 0
   },
@@ -1279,7 +1279,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 220,
     extField: false,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     sortRank: 0,
     gridRank: 0,
@@ -1303,7 +1303,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 230,
     extField: false,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -1316,7 +1316,7 @@ export const MENU_COLUMNS = [
     menuName: 'Entity',
     rank: 240,
     extField: false,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     sortRank: 0,
     gridRank: 0,
     colSize: 0,
@@ -1338,7 +1338,7 @@ export const MENU_COLUMNS = [
     name: 'id',
     menuName: 'LoginHistory',
     rank: 10,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -1358,7 +1358,7 @@ export const MENU_COLUMNS = [
     name: 'domain_id',
     menuName: 'LoginHistory',
     rank: 20,
-    term: 'label.domain',
+    term: 'field.domain',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -1374,7 +1374,7 @@ export const MENU_COLUMNS = [
     searchEditor: 'resource-selector',
     menuName: 'LoginHistory',
     rank: 30,
-    term: 'label.access_user_id',
+    term: 'field.access_user_id',
     refName: 'User',
     sortRank: 0,
     gridRank: 10,
@@ -1401,7 +1401,7 @@ export const MENU_COLUMNS = [
     name: 'access_ip',
     menuName: 'LoginHistory',
     rank: 40,
-    term: 'label.access_ip',
+    term: 'field.access_ip',
     gridWidth: 200,
     formEditor: 'text'
   },
@@ -1421,7 +1421,7 @@ export const MENU_COLUMNS = [
     name: 'logout_at',
     menuName: 'LoginHistory',
     rank: 50,
-    term: 'label.logout_at',
+    term: 'field.logout_at',
     gridWidth: 200,
     formEditor: 'text'
   },
@@ -1436,7 +1436,7 @@ export const MENU_COLUMNS = [
     searchEditor: 'tristate-radio',
     menuName: 'LoginHistory',
     rank: 60,
-    term: 'label.success',
+    term: 'field.success',
     sortRank: 0,
     gridRank: 70,
     colSize: 0,
@@ -1462,7 +1462,7 @@ export const MENU_COLUMNS = [
     name: 'session_id',
     menuName: 'LoginHistory',
     rank: 70,
-    term: 'label.session_id',
+    term: 'field.session_id',
     gridWidth: 0,
     formEditor: 'text'
   },
@@ -1481,7 +1481,7 @@ export const MENU_COLUMNS = [
     name: 'creator_id',
     menuName: 'LoginHistory',
     rank: 80,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     gridWidth: 0
   },
@@ -1501,7 +1501,7 @@ export const MENU_COLUMNS = [
     name: 'updater_id',
     menuName: 'LoginHistory',
     rank: 90,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     gridWidth: 100
   },
@@ -1519,7 +1519,7 @@ export const MENU_COLUMNS = [
     name: 'created_at',
     menuName: 'LoginHistory',
     rank: 100,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -1538,7 +1538,7 @@ export const MENU_COLUMNS = [
     name: 'updated_at',
     menuName: 'LoginHistory',
     rank: 110,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     gridWidth: 135
   },
   {
@@ -1556,7 +1556,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 10,
     extField: false,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -1576,7 +1576,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 20,
     extField: false,
-    term: 'label.domain',
+    term: 'field.domain',
     refName: 'Domain',
     gridWidth: 0,
     formEditor: 'hidden'
@@ -1594,7 +1594,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 30,
     extField: false,
-    term: 'label.main_menu',
+    term: 'field.main_menu',
     refName: 'Menu',
     refParams: 'menu_type=MENU',
     sortRank: 0,
@@ -1619,7 +1619,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 40,
     extField: false,
-    term: 'label.name',
+    term: 'field.name',
     sortRank: 0,
     gridRank: 20,
     colSize: 64,
@@ -1642,7 +1642,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 50,
     extField: false,
-    term: 'label.rank',
+    term: 'field.rank',
     sortRank: 10,
     gridRank: 10,
     colSize: 0,
@@ -1663,7 +1663,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 60,
     extField: false,
-    term: 'label.description',
+    term: 'field.description',
     sortRank: 0,
     gridRank: 0,
     colSize: 255,
@@ -1685,7 +1685,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 70,
     extField: false,
-    term: 'label.category',
+    term: 'field.category',
     refName: 'MENU_CATEGORY',
     sortRank: 0,
     gridRank: 40,
@@ -1710,7 +1710,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 80,
     extField: false,
-    term: 'label.menu_type',
+    term: 'field.menu_type',
     refName: 'MENU_TYPE',
     sortRank: 0,
     gridRank: 50,
@@ -1738,7 +1738,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 90,
     extField: false,
-    term: 'label.template',
+    term: 'field.template',
     gridWidth: 175,
     formEditor: 'text'
   },
@@ -1753,7 +1753,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 100,
     extField: false,
-    term: 'label.detail_form',
+    term: 'field.detail_form',
     sortRank: 0,
     gridRank: 70,
     colSize: 64,
@@ -1779,7 +1779,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 110,
     extField: false,
-    term: 'label.detail_layout',
+    term: 'field.detail_layout',
     refName: 'ViewTemplate',
     gridWidth: 175,
     formEditor: 'text'
@@ -1797,7 +1797,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 120,
     extField: false,
-    term: 'label.resource_type',
+    term: 'field.resource_type',
     refName: 'MENU_REF_TYPE',
     sortRank: 0,
     gridRank: 110,
@@ -1820,7 +1820,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 130,
     extField: false,
-    term: 'label.resource_name',
+    term: 'field.resource_name',
     sortRank: 0,
     gridRank: 120,
     colSize: 64,
@@ -1841,7 +1841,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 140,
     extField: false,
-    term: 'label.resource_url',
+    term: 'field.resource_url',
     sortRank: 0,
     gridRank: 130,
     colSize: 128,
@@ -1866,7 +1866,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 150,
     extField: false,
-    term: 'label.grid_save_url',
+    term: 'field.grid_save_url',
     gridWidth: 275,
     formEditor: 'text'
   },
@@ -1883,7 +1883,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 160,
     extField: false,
-    term: 'label.routing_type',
+    term: 'field.routing_type',
     refName: 'ROUTING_TYPE',
     sortRank: 0,
     gridRank: 90,
@@ -1906,7 +1906,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 170,
     extField: false,
-    term: 'label.routing',
+    term: 'field.routing',
     sortRank: 0,
     gridRank: 100,
     colSize: 64,
@@ -1927,7 +1927,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 180,
     extField: false,
-    term: 'label.id_field',
+    term: 'field.id_field',
     sortRank: 0,
     gridRank: 150,
     colSize: 64,
@@ -1952,7 +1952,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 190,
     extField: false,
-    term: 'label.title_field',
+    term: 'field.title_field',
     gridWidth: 70,
     formEditor: 'text'
   },
@@ -1972,7 +1972,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 200,
     extField: false,
-    term: 'label.pagination',
+    term: 'field.pagination',
     gridWidth: 80,
     formEditor: 'tristate-radio'
   },
@@ -1992,7 +1992,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 210,
     extField: false,
-    term: 'label.items_prop',
+    term: 'field.items_prop',
     gridWidth: 90,
     formEditor: 'text'
   },
@@ -2012,7 +2012,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 220,
     extField: false,
-    term: 'label.total_prop',
+    term: 'field.total_prop',
     gridWidth: 90,
     formEditor: 'text'
   },
@@ -2027,7 +2027,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 230,
     extField: false,
-    term: 'label.fixed_columns',
+    term: 'field.fixed_columns',
     sortRank: 0,
     gridRank: 200,
     colSize: 0,
@@ -2050,7 +2050,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 250,
     extField: false,
-    term: 'label.icon',
+    term: 'field.icon',
     sortRank: 0,
     gridRank: 220,
     colSize: 255,
@@ -2072,7 +2072,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 260,
     extField: false,
-    term: 'label.hidden_flag',
+    term: 'field.hidden_flag',
     sortRank: 0,
     gridRank: 230,
     colSize: 0,
@@ -2094,7 +2094,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 270,
     extField: false,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     sortRank: 0,
     gridRank: 0,
@@ -2115,7 +2115,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 280,
     extField: false,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     sortRank: 0,
     gridRank: 0,
@@ -2134,7 +2134,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 290,
     extField: false,
-    term: 'label.created_at',
+    term: 'field.created_at',
     sortRank: 0,
     gridRank: 0,
     colSize: 0,
@@ -2152,7 +2152,7 @@ export const MENU_COLUMNS = [
     menuName: 'Menu',
     rank: 300,
     extField: false,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     sortRank: 0,
     gridRank: 0,
     colSize: 0,
@@ -2174,7 +2174,7 @@ export const MENU_COLUMNS = [
     name: 'id',
     menuName: 'PermitUrl',
     rank: 10,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0
   },
   {
@@ -2192,7 +2192,7 @@ export const MENU_COLUMNS = [
     name: 'domain_id',
     menuName: 'PermitUrl',
     rank: 20,
-    term: 'label.domain',
+    term: 'field.domain',
     gridWidth: 0
   },
   {
@@ -2205,7 +2205,7 @@ export const MENU_COLUMNS = [
     colType: 'string',
     menuName: 'PermitUrl',
     rank: 30,
-    term: 'label.name',
+    term: 'field.name',
     sortRank: 0,
     gridRank: 10,
     colSize: 128,
@@ -2223,7 +2223,7 @@ export const MENU_COLUMNS = [
     colType: 'string',
     menuName: 'PermitUrl',
     rank: 40,
-    term: 'label.description',
+    term: 'field.description',
     sortRank: 0,
     gridRank: 20,
     colSize: 255,
@@ -2244,7 +2244,7 @@ export const MENU_COLUMNS = [
     searchEditor: 'code-combo',
     menuName: 'PermitUrl',
     rank: 50,
-    term: 'label.type',
+    term: 'field.type',
     refName: 'PERMIT_URL_TYPE',
     sortRank: 0,
     gridRank: 30,
@@ -2266,7 +2266,7 @@ export const MENU_COLUMNS = [
     searchEditor: 'tristate-radio',
     menuName: 'PermitUrl',
     rank: 60,
-    term: 'label.active',
+    term: 'field.active',
     sortRank: 0,
     gridRank: 40,
     colSize: 0,
@@ -2291,7 +2291,7 @@ export const MENU_COLUMNS = [
     name: 'creator_id',
     menuName: 'PermitUrl',
     rank: 70,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     gridWidth: 0
   },
@@ -2306,7 +2306,7 @@ export const MENU_COLUMNS = [
     colType: 'string',
     menuName: 'PermitUrl',
     rank: 80,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     sortRank: 0,
     gridRank: 50,
@@ -2330,7 +2330,7 @@ export const MENU_COLUMNS = [
     name: 'created_at',
     menuName: 'PermitUrl',
     rank: 90,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -2343,7 +2343,7 @@ export const MENU_COLUMNS = [
     colType: 'datetime',
     menuName: 'PermitUrl',
     rank: 100,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     sortRank: 0,
     gridRank: 60,
     colSize: 0,
@@ -2367,7 +2367,7 @@ export const MENU_COLUMNS = [
     menuName: 'Role',
     rank: 0,
     extField: false,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -2382,7 +2382,7 @@ export const MENU_COLUMNS = [
     menuName: 'Role',
     rank: 10,
     extField: false,
-    term: 'label.domain',
+    term: 'field.domain',
     refName: 'Domain',
     sortRank: 0,
     gridRank: 0,
@@ -2406,7 +2406,7 @@ export const MENU_COLUMNS = [
     menuName: 'Role',
     rank: 20,
     extField: false,
-    term: 'label.name',
+    term: 'field.name',
     sortRank: 10,
     gridRank: 10,
     colSize: 64,
@@ -2428,7 +2428,7 @@ export const MENU_COLUMNS = [
     menuName: 'Role',
     rank: 30,
     extField: false,
-    term: 'label.description',
+    term: 'field.description',
     sortRank: 0,
     gridRank: 20,
     colSize: 255,
@@ -2449,7 +2449,7 @@ export const MENU_COLUMNS = [
     menuName: 'Role',
     rank: 40,
     extField: false,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     sortRank: 0,
     gridRank: 0,
@@ -2471,7 +2471,7 @@ export const MENU_COLUMNS = [
     menuName: 'Role',
     rank: 50,
     extField: false,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     sortRank: 0,
     gridRank: 30,
@@ -2495,7 +2495,7 @@ export const MENU_COLUMNS = [
     menuName: 'Role',
     rank: 60,
     extField: false,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -2509,7 +2509,7 @@ export const MENU_COLUMNS = [
     menuName: 'Role',
     rank: 70,
     extField: false,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     sortRank: 0,
     gridRank: 40,
     colSize: 0,
@@ -2528,7 +2528,7 @@ export const MENU_COLUMNS = [
     menuName: 'Setting',
     rank: 10,
     extField: false,
-    term: 'label.id',
+    term: 'field.id',
     sortRank: 0,
     gridRank: 0,
     colSize: 64,
@@ -2548,7 +2548,7 @@ export const MENU_COLUMNS = [
     menuName: 'Setting',
     rank: 20,
     extField: false,
-    term: 'label.domain',
+    term: 'field.domain',
     refName: 'Domain',
     sortRank: 0,
     gridRank: 0,
@@ -2571,7 +2571,7 @@ export const MENU_COLUMNS = [
     menuName: 'Setting',
     rank: 30,
     extField: false,
-    term: 'label.name',
+    term: 'field.name',
     sortRank: 10,
     gridRank: 10,
     colSize: 64,
@@ -2594,7 +2594,7 @@ export const MENU_COLUMNS = [
     menuName: 'Setting',
     rank: 40,
     extField: false,
-    term: 'label.description',
+    term: 'field.description',
     sortRank: 0,
     gridRank: 20,
     colSize: 255,
@@ -2615,7 +2615,7 @@ export const MENU_COLUMNS = [
     menuName: 'Setting',
     rank: 50,
     extField: false,
-    term: 'label.value',
+    term: 'field.value',
     sortRank: 0,
     gridRank: 30,
     colSize: 2000,
@@ -2637,7 +2637,7 @@ export const MENU_COLUMNS = [
     menuName: 'Setting',
     rank: 60,
     extField: false,
-    term: 'label.category',
+    term: 'field.category',
     refName: 'SYSTEM',
     sortRank: 0,
     gridRank: 50,
@@ -2658,7 +2658,7 @@ export const MENU_COLUMNS = [
     menuName: 'Setting',
     rank: 80,
     extField: false,
-    term: 'label.created_at',
+    term: 'field.created_at',
     sortRank: 0,
     gridRank: 0,
     colSize: 0,
@@ -2677,7 +2677,7 @@ export const MENU_COLUMNS = [
     menuName: 'Setting',
     rank: 90,
     extField: false,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     sortRank: 0,
     gridRank: 110,
     colSize: 0,
@@ -2696,7 +2696,7 @@ export const MENU_COLUMNS = [
     menuName: 'Setting',
     rank: 100,
     extField: false,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     sortRank: 0,
     gridRank: 0,
@@ -2717,7 +2717,7 @@ export const MENU_COLUMNS = [
     menuName: 'Setting',
     rank: 110,
     extField: false,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     sortRank: 0,
     gridRank: 100,
@@ -2743,7 +2743,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 0,
     extField: false,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0
   },
   {
@@ -2762,7 +2762,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 10,
     extField: false,
-    term: 'label.domain',
+    term: 'field.domain',
     refName: 'Domain',
     gridWidth: 0
   },
@@ -2778,7 +2778,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 20,
     extField: false,
-    term: 'label.name',
+    term: 'field.name',
     sortRank: 0,
     gridRank: 30,
     colSize: 64,
@@ -2803,7 +2803,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 30,
     extField: false,
-    term: 'label.description',
+    term: 'field.description',
     gridWidth: 0
   },
   {
@@ -2820,7 +2820,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 40,
     extField: false,
-    term: 'label.language',
+    term: 'field.language',
     refName: 'LOCALE',
     sortRank: 0,
     gridRank: 20,
@@ -2844,7 +2844,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 50,
     extField: false,
-    term: 'label.category',
+    term: 'field.category',
     refName: 'TERMS_CATEGORY',
     sortRank: 0,
     gridRank: 10,
@@ -2866,7 +2866,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 60,
     extField: false,
-    term: 'label.display',
+    term: 'field.display',
     sortRank: 0,
     gridRank: 40,
     colSize: 1000,
@@ -2891,7 +2891,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 70,
     extField: false,
-    term: 'label.display_short',
+    term: 'field.display_short',
     gridWidth: 0
   },
   {
@@ -2910,7 +2910,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 80,
     extField: false,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     gridWidth: 0
   },
@@ -2926,7 +2926,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 90,
     extField: false,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     sortRank: 0,
     gridRank: 60,
@@ -2950,7 +2950,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 100,
     extField: false,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -2969,7 +2969,7 @@ export const MENU_COLUMNS = [
     menuName: 'Terminology',
     rank: 110,
     extField: false,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     gridWidth: 135
   },
   {
@@ -2987,7 +2987,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 10,
     extField: false,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3004,7 +3004,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 20,
     extField: false,
-    term: 'label.domain',
+    term: 'field.domain',
     refName: 'Domain',
     sortRank: 0,
     gridRank: 20,
@@ -3027,7 +3027,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 30,
     extField: false,
-    term: 'label.login',
+    term: 'field.login',
     sortRank: 10,
     gridRank: 10,
     colSize: 25,
@@ -3050,7 +3050,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 40,
     extField: false,
-    term: 'label.email',
+    term: 'field.email',
     sortRank: 0,
     gridRank: 30,
     colSize: 32,
@@ -3073,7 +3073,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 50,
     extField: false,
-    term: 'label.name',
+    term: 'field.name',
     sortRank: 0,
     gridRank: 20,
     colSize: 30,
@@ -3095,7 +3095,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 60,
     extField: false,
-    term: 'label.language',
+    term: 'field.language',
     refName: 'LOCALE',
     sortRank: 0,
     gridRank: 40,
@@ -3125,7 +3125,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 70,
     extField: false,
-    term: 'label.super_user',
+    term: 'field.super_user',
     gridWidth: 60,
     formEditor: 'tristate-radio'
   },
@@ -3142,7 +3142,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 80,
     extField: false,
-    term: 'label.admin_flag',
+    term: 'field.admin_flag',
     sortRank: 0,
     gridRank: 70,
     colSize: 0,
@@ -3165,7 +3165,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 90,
     extField: false,
-    term: 'label.operator_flag',
+    term: 'field.operator_flag',
     sortRank: 0,
     gridRank: 0,
     colSize: 0,
@@ -3188,7 +3188,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 100,
     extField: false,
-    term: 'label.active',
+    term: 'field.active',
     sortRank: 0,
     gridRank: 50,
     colSize: 0,
@@ -3212,7 +3212,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 110,
     extField: false,
-    term: 'label.exclusive_role',
+    term: 'field.exclusive_role',
     refName: 'EXCLUSIVE_ROLE',
     sortRank: 0,
     gridRank: 90,
@@ -3236,7 +3236,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 115,
     extField: false,
-    term: 'label.timezone',
+    term: 'field.timezone',
     sortRank: 0,
     gridRank: 0,
     colSize: 64,
@@ -3261,7 +3261,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 120,
     extField: false,
-    term: 'label.phone_no',
+    term: 'field.phone_no',
     gridWidth: 0
   },
   {
@@ -3279,7 +3279,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 130,
     extField: false,
-    term: 'label.password',
+    term: 'field.password',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3298,7 +3298,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 140,
     extField: false,
-    term: 'label.reset_password_token',
+    term: 'field.reset_password_token',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3317,7 +3317,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 150,
     extField: false,
-    term: 'label.reset_password_sent_at',
+    term: 'field.reset_password_sent_at',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3336,7 +3336,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 160,
     extField: false,
-    term: 'label.remember_created_at',
+    term: 'field.remember_created_at',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3355,7 +3355,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 170,
     extField: false,
-    term: 'label.sign_in_count',
+    term: 'field.sign_in_count',
     gridWidth: 0,
     formEditor: 'hidden',
     defVal: '0'
@@ -3375,7 +3375,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 180,
     extField: false,
-    term: 'label.current_sign_in_at',
+    term: 'field.current_sign_in_at',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3394,7 +3394,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 190,
     extField: false,
-    term: 'label.last_sign_in_at',
+    term: 'field.last_sign_in_at',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3413,7 +3413,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 200,
     extField: false,
-    term: 'label.current_sign_in_ip',
+    term: 'field.current_sign_in_ip',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3432,7 +3432,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 210,
     extField: false,
-    term: 'label.last_sign_in_ip',
+    term: 'field.last_sign_in_ip',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3448,7 +3448,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 220,
     extField: false,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     sortRank: 0,
     gridRank: 0,
@@ -3469,7 +3469,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 230,
     extField: false,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     sortRank: 0,
     gridRank: 0,
@@ -3493,7 +3493,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 240,
     extField: false,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -3511,7 +3511,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 250,
     extField: false,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     gridWidth: 0
   },
   {
@@ -3529,7 +3529,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 260,
     extField: false,
-    term: 'label.dept',
+    term: 'field.dept',
     gridWidth: 0
   },
   {
@@ -3547,7 +3547,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 270,
     extField: false,
-    term: 'label.division',
+    term: 'field.division',
     gridWidth: 0
   },
   {
@@ -3565,7 +3565,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 280,
     extField: false,
-    term: 'label.type',
+    term: 'field.type',
     gridWidth: 0
   },
   {
@@ -3583,7 +3583,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 290,
     extField: false,
-    term: 'label.password_expire_date',
+    term: 'field.password_expire_date',
     gridWidth: 0
   },
   {
@@ -3601,7 +3601,7 @@ export const MENU_COLUMNS = [
     menuName: 'User',
     rank: 300,
     extField: false,
-    term: 'label.account_expire_date',
+    term: 'field.account_expire_date',
     gridWidth: 0
   },
   {
@@ -3618,7 +3618,7 @@ export const MENU_COLUMNS = [
     name: 'id',
     menuName: 'UserHistory',
     rank: 10,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3637,7 +3637,7 @@ export const MENU_COLUMNS = [
     name: 'domain_id',
     menuName: 'UserHistory',
     rank: 20,
-    term: 'label.domain',
+    term: 'field.domain',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3657,7 +3657,7 @@ export const MENU_COLUMNS = [
     name: 'user_account_id',
     menuName: 'UserHistory',
     rank: 30,
-    term: 'label.user_id',
+    term: 'field.user_id',
     refName: 'User',
     gridWidth: 200,
     formEditor: 'text'
@@ -3678,7 +3678,7 @@ export const MENU_COLUMNS = [
     name: 'status',
     menuName: 'UserHistory',
     rank: 40,
-    term: 'label.status',
+    term: 'field.status',
     refName: 'USER_HISTORY_STATUS',
     gridWidth: 300,
     formEditor: 'text'
@@ -3698,7 +3698,7 @@ export const MENU_COLUMNS = [
     name: 'creator_id',
     menuName: 'UserHistory',
     rank: 50,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     gridWidth: 0
   },
@@ -3719,7 +3719,7 @@ export const MENU_COLUMNS = [
     name: 'updater_id',
     menuName: 'UserHistory',
     rank: 60,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     gridWidth: 100
   },
@@ -3737,7 +3737,7 @@ export const MENU_COLUMNS = [
     name: 'created_at',
     menuName: 'UserHistory',
     rank: 70,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -3756,7 +3756,7 @@ export const MENU_COLUMNS = [
     name: 'updated_at',
     menuName: 'UserHistory',
     rank: 80,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     gridWidth: 135
   },
   {
@@ -3773,7 +3773,7 @@ export const MENU_COLUMNS = [
     name: 'id',
     menuName: 'UserRoleHistory',
     rank: 10,
-    term: 'label.id',
+    term: 'field.id',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3791,7 +3791,7 @@ export const MENU_COLUMNS = [
     name: 'domain_id',
     menuName: 'UserRoleHistory',
     rank: 20,
-    term: 'label.domain',
+    term: 'field.domain',
     gridWidth: 0,
     formEditor: 'hidden'
   },
@@ -3807,7 +3807,7 @@ export const MENU_COLUMNS = [
     searchEditor: 'resource-selector',
     menuName: 'UserRoleHistory',
     rank: 30,
-    term: 'label.user_id',
+    term: 'field.user_id',
     refName: 'User',
     sortRank: 0,
     gridRank: 21,
@@ -3830,7 +3830,7 @@ export const MENU_COLUMNS = [
     searchEditor: 'resource-selector',
     menuName: 'UserRoleHistory',
     rank: 40,
-    term: 'label.role_id',
+    term: 'field.role_id',
     refName: 'Role',
     sortRank: 0,
     gridRank: 22,
@@ -3853,7 +3853,7 @@ export const MENU_COLUMNS = [
     searchEditor: 'code-combo',
     menuName: 'UserRoleHistory',
     rank: 50,
-    term: 'label.status',
+    term: 'field.status',
     refName: 'USER_ROLE_HISTORY_STATUS',
     sortRank: 0,
     gridRank: 30,
@@ -3878,7 +3878,7 @@ export const MENU_COLUMNS = [
     name: 'creator_id',
     menuName: 'UserRoleHistory',
     rank: 60,
-    term: 'label.creator',
+    term: 'field.creator',
     refName: 'User',
     gridWidth: 0
   },
@@ -3898,7 +3898,7 @@ export const MENU_COLUMNS = [
     name: 'updater_id',
     menuName: 'UserRoleHistory',
     rank: 70,
-    term: 'label.updater',
+    term: 'field.updater',
     refName: 'User',
     gridWidth: 100
   },
@@ -3916,7 +3916,7 @@ export const MENU_COLUMNS = [
     name: 'created_at',
     menuName: 'UserRoleHistory',
     rank: 80,
-    term: 'label.created_at',
+    term: 'field.created_at',
     gridWidth: 0
   },
   {
@@ -3935,7 +3935,7 @@ export const MENU_COLUMNS = [
     name: 'updated_at',
     menuName: 'UserRoleHistory',
     rank: 90,
-    term: 'label.updated_at',
+    term: 'field.updated_at',
     gridWidth: 135
   }
 ]
