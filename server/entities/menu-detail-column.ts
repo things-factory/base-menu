@@ -1,5 +1,5 @@
-import { Domain, DomainBaseEntity } from '@things-factory/shell'
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Index } from 'typeorm'
+import { Domain } from '@things-factory/shell'
+import { CreateDateColumn, UpdateDateColumn, Column, Entity, ManyToOne, PrimaryGeneratedColumn, Index } from 'typeorm'
 import { MenuDetail } from './menu-detail'
 import { User } from '@things-factory/auth-base'
 
@@ -13,7 +13,7 @@ import { User } from '@things-factory/auth-base'
   menuDetailColumn.menuDetail,
   menuDetailColumn.rank
 ])
-export class MenuDetailColumn extends DomainBaseEntity {
+export class MenuDetailColumn {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
@@ -188,6 +188,12 @@ export class MenuDetailColumn extends DomainBaseEntity {
     nullable: true
   })
   extField: boolean
+
+  @CreateDateColumn()
+  createdAt: Date
+
+  @UpdateDateColumn()
+  updatedAt: Date
 
   @ManyToOne(type => User)
   creator: User

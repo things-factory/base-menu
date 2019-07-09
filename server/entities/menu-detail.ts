@@ -1,6 +1,17 @@
 import { User } from '@things-factory/auth-base'
-import { Domain, DomainBaseEntity } from '@things-factory/shell'
-import { Column, Entity, Index, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm'
+import { Domain } from '@things-factory/shell'
+import {
+  CreateDateColumn,
+  UpdateDateColumn,
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryGeneratedColumn
+} from 'typeorm'
 import { Menu } from './menu'
 import { MenuDetailButton } from './menu-detail-button'
 import { MenuDetailColumn } from './menu-detail-column'
@@ -8,7 +19,7 @@ import { MenuDetailColumn } from './menu-detail-column'
 @Entity('menu-details')
 @Index('ix_menu_detail_0', (menuDetail: MenuDetail) => [menuDetail.menu, menuDetail.name], { unique: true })
 @Index('ix_menu_detail_1', (menuDetail: MenuDetail) => [menuDetail.menu])
-export class MenuDetail extends DomainBaseEntity {
+export class MenuDetail {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
@@ -65,6 +76,12 @@ export class MenuDetail extends DomainBaseEntity {
 
   @OneToMany(type => MenuDetailButton, menuDetailButton => menuDetailButton.menuDetail)
   buttons: MenuDetailButton[]
+
+  @CreateDateColumn()
+  createdAt: Date
+
+  @UpdateDateColumn()
+  updatedAt: Date
 
   @ManyToOne(type => User)
   creator: User
