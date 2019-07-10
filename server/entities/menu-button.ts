@@ -1,6 +1,6 @@
 import { User } from '@things-factory/auth-base'
 import { Domain } from '@things-factory/shell'
-import { CreateDateColumn, UpdateDateColumn, Column, Entity, Index, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, CreateDateColumn, Entity, Index, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 import { Menu } from './menu'
 
 @Entity('menu-buttons')
@@ -50,9 +50,13 @@ export class MenuButton {
   @UpdateDateColumn()
   updatedAt: Date
 
-  @ManyToOne(type => User)
+  @ManyToOne(type => User, {
+    nullable: true
+  })
   creator: User
 
-  @ManyToOne(type => User)
+  @ManyToOne(type => User, {
+    nullable: true
+  })
   updater: User
 }
