@@ -3,7 +3,7 @@ import { Domain } from '@things-factory/shell'
 import { Column, CreateDateColumn, Entity, Index, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 import { MenuDetail } from './menu-detail'
 
-@Entity('menu-detail-buttons')
+@Entity()
 @Index(
   'ix_menu_detail_btn_0',
   (menuDetailButton: MenuDetailButton) => [menuDetailButton.menuDetail, menuDetailButton.text],

@@ -16,7 +16,7 @@ import { Menu } from './menu'
 import { MenuDetailButton } from './menu-detail-button'
 import { MenuDetailColumn } from './menu-detail-column'
 
-@Entity('menu-details')
+@Entity()
 @Index('ix_menu_detail_0', (menuDetail: MenuDetail) => [menuDetail.menu, menuDetail.name], { unique: true })
 @Index('ix_menu_detail_1', (menuDetail: MenuDetail) => [menuDetail.menu])
 export class MenuDetail {

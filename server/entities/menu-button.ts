@@ -3,7 +3,7 @@ import { Domain } from '@things-factory/shell'
 import { Column, CreateDateColumn, Entity, Index, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 import { Menu } from './menu'
 
-@Entity('menu-buttons')
+@Entity()
 @Index('ix_menu_button_0', (menuButton: MenuButton) => [menuButton.menu, menuButton.text], { unique: true })
 @Index('ix_menu_button_1', (menuButton: MenuButton) => [menuButton.menu])
 export class MenuButton {
