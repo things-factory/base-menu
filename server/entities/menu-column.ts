@@ -16,25 +16,25 @@ export class MenuColumn {
   @ManyToOne(type => Menu, menu => menu.columns)
   menu: Menu
 
-  @Column('text')
+  @Column()
   name: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   description: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   rank: number
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   term: string
 
-  @Column('text')
+  @Column()
   colType: string
 
   @Column('int', {
@@ -42,32 +42,32 @@ export class MenuColumn {
   })
   colSize: number
 
-  @Column('boolean', {
+  @Column({
     default: true
   })
   nullable: boolean
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   refType: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   refName: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   refUrl: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   refParams: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   refRelated: string
@@ -82,36 +82,36 @@ export class MenuColumn {
   })
   sortRank: number
 
-  @Column('boolean', {
+  @Column({
     nullable: true
   })
   reverseSort: boolean
 
-  @Column('boolean', {
+  @Column({
     nullable: true
   })
   virtualField: boolean
 
-  @Column('boolean', {
+  @Column({
     nullable: true
   })
   extField: boolean
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   searchName: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   searchEditor: string
-  @Column('text', {
+  @Column({
     nullable: true
   })
   searchOper: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   searchInitVal: string
@@ -120,17 +120,17 @@ export class MenuColumn {
     nullable: true
   })
   gridRank: number
-  @Column('text', {
+  @Column({
     nullable: true
   })
   gridEditor: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   gridFormat: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   gridValidator: string
@@ -140,7 +140,7 @@ export class MenuColumn {
   })
   gridWidth: number
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   gridAlign: string
@@ -150,32 +150,32 @@ export class MenuColumn {
   })
   uniqRank: number
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   formEditor: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   formValidator: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   formFormat: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   defVal: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   rangeVal: string
 
-  @Column('boolean', {
+  @Column({
     default: false
   })
   ignoreOnSave: boolean

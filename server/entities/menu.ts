@@ -24,12 +24,12 @@ export class Menu {
   @ManyToOne(type => Domain)
   domain: Domain
 
-  @Column('text', {
+  @Column({
     unique: true
   })
   name: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   description: string
@@ -40,17 +40,17 @@ export class Menu {
   @OneToMany(type => Menu, child => child.parent)
   childrens: Menu[]
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   template: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   menuType: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   category: string
@@ -60,77 +60,77 @@ export class Menu {
   })
   rank: number
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   iconPath: string
 
-  @Column('boolean', {
+  @Column({
     nullable: true
   })
   hiddenFlag: boolean
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   routing: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   routingType: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   detailFormId: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   detailLayout: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   resourceType: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   resourceName: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   resourceUrl: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   gridSaveUrl: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   idField: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   titleField: string
 
-  @Column('boolean', {
+  @Column({
     nullable: true
   })
   pagination: boolean
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   itemsProp: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   totalProp: string

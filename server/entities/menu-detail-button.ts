@@ -20,7 +20,7 @@ export class MenuDetailButton {
   @ManyToOne(type => MenuDetail, menuDetail => menuDetail.columns)
   menuDetail: MenuDetail
 
-  @Column('text')
+  @Column()
   text: string
 
   @Column('int', {
@@ -28,17 +28,17 @@ export class MenuDetailButton {
   })
   rank: number
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   icon: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   style: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   logic: string

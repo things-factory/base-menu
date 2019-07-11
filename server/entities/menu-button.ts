@@ -21,25 +21,25 @@ export class MenuButton {
   })
   rank: number
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   style: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   icon: string
 
-  @Column('text')
+  @Column()
   text: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   auth: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   logic: string

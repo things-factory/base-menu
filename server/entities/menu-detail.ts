@@ -30,43 +30,43 @@ export class MenuDetail {
   @JoinColumn()
   menu: Menu
 
-  @Column('text')
+  @Column()
   name: string
 
-  @Column('text')
+  @Column()
   viewSection: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   entityId: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   dataProp: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   association: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   searchUrl: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   saveUrl: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   masterField: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   customView: string
