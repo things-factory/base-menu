@@ -11,6 +11,9 @@ export const userMenusResolver = {
         menuType: Equal('MENU'),
         domain: context.domain
       },
+      order: {
+        rank: 'ASC'
+      },
       relations: ['domain', 'parent', 'childrens']
     })
   }
