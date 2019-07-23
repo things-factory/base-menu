@@ -5,14 +5,13 @@ export const NewMenu = gql`
     name: String!
     description: String
     category: String
-    menuType: String
+    menuType: String!
     rank: Int
     routing: String
-    routingType: String!
+    routingType: String
     resourceType: String
     resourceUrl: String
     resourceName: String
-    title: String!
     idField: String
     titleField: String
     gridSaveUrl: String

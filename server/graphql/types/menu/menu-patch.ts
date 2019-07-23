@@ -12,7 +12,6 @@ export const MenuPatch = gql`
     resourceType: String
     resourceUrl: String
     resourceName: String
-    title: String
     idField: String
     titleField: String
     gridSaveUrl: String

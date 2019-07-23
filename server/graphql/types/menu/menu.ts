@@ -14,7 +14,6 @@ export const Menu = gql`
     resourceType: String
     resourceUrl: String
     resourceName: String
-    title: String
     idField: String
     titleField: String
     gridSaveUrl: String
