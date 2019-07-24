@@ -11,7 +11,7 @@ export const addRoutingType = (routingType, page) => {
 }
 
 export const registMenuProvider = provider => {
-  if (provider && typeof provider === 'fucntion') {
+  if (provider && typeof provider === 'function') {
     return { type: REGIST_MENU_PROVIDER, provider }
   }
 }
