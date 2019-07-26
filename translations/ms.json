@@ -11,7 +11,7 @@
   "field.col_size": "saiz ruangan",
   "field.nullable": "boleh null",
   "field.ref_type": "jenis rujukan",
-  "field.ref_name": "name rujukan",
+  "field.ref_name": "nama rujukan",
   "field.ref_url": "url rujukan",
   "field.ref_params": "parameter rujukan",
   "field.ref_related": "rujukan berkaitan",
