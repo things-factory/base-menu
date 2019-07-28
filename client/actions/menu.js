@@ -1,5 +1,5 @@
 export const UPDATE_MENU = 'UPDATE_MENU'
-export const REGIST_MENU_PROVIDER = 'REGIST_MENU_PROVIDER'
+export const UPDATE_MENU_PROVIDER = 'UPDATE_MENU_PROVIDER'
 export const ADD_ROUTING_TYPE = 'ADD_ROUTING_TYPE'
 
 export const updateMenu = menus => {
@@ -10,8 +10,8 @@ export const addRoutingType = (routingType, page) => {
   return { type: ADD_ROUTING_TYPE, routingType, page }
 }
 
-export const registMenuProvider = provider => {
+export const updateMenuProvider = provider => {
   if (provider && typeof provider === 'function') {
-    return { type: REGIST_MENU_PROVIDER, provider }
+    return { type: UPDATE_MENU_PROVIDER, provider }
   }
 }

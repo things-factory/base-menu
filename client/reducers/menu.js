@@ -1,4 +1,4 @@
-import { UPDATE_MENU, REGIST_MENU_PROVIDER, ADD_ROUTING_TYPE } from '../actions/menu'
+import { UPDATE_MENU, UPDATE_MENU_PROVIDER, ADD_ROUTING_TYPE } from '../actions/menu'
 
 const INITIAL_STATE = {
   menus: [],
@@ -22,7 +22,7 @@ const menu = (state = INITIAL_STATE, action) => {
         }
       }
 
-    case REGIST_MENU_PROVIDER:
+    case UPDATE_MENU_PROVIDER:
       return {
         ...state,
         provider: action.provider
