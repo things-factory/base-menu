@@ -18,7 +18,7 @@ const menu = (state = INITIAL_STATE, action) => {
         ...state,
         routingTypes: {
           ...state.routingTypes,
-          [action.routingType]: action.page
+          [action.routingType]: action.config
         }
       }
 

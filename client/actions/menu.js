@@ -6,8 +6,15 @@ export const updateMenu = menus => {
   return { type: UPDATE_MENU, menus }
 }
 
-export const addRoutingType = (routingType, page) => {
-  return { type: ADD_ROUTING_TYPE, routingType, page }
+export const addRoutingType = (routingType, page, icon) => {
+  return {
+    type: ADD_ROUTING_TYPE,
+    routingType,
+    config: {
+      page,
+      icon
+    }
+  }
 }
 
 export const updateMenuProvider = provider => {
