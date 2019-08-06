@@ -3,9 +3,9 @@ import { getRepository } from 'typeorm'
 import { Menu } from '../../../entities'
 
 export const menusResolver = {
-  async menus(_: any, params: ListParam) {
+  async menus(_: any, params: ListParam, context: any) {
     const queryBuilder = getRepository(Menu).createQueryBuilder()
-    buildQuery(queryBuilder, params)
+    buildQuery(queryBuilder, params, context)
     const [items, total] = await queryBuilder
       .leftJoinAndSelect('Menu.domain', 'Domain')
       .leftJoinAndSelect('Menu.parent', 'Parent')

@@ -3,9 +3,9 @@ import { getRepository } from 'typeorm'
 import { MenuButton } from '../../../entities'
 
 export const menuButtonsResolver = {
-  async menuButtons(_: any, params: ListParam) {
+  async menuButtons(_: any, params: ListParam, context: any) {
     const queryBuilder = getRepository(MenuButton).createQueryBuilder()
-    buildQuery(queryBuilder, params)
+    buildQuery(queryBuilder, params, context)
     const [items, total] = await queryBuilder
       .leftJoinAndSelect('MenuButton.domain', 'Domain')
       .leftJoinAndSelect('MenuButton.menu', 'Menu')
