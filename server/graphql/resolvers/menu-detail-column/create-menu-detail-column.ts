@@ -8,7 +8,7 @@ export const createMenuDetailColumn = {
       ...menuDetailColumn,
       menuDetail: await getRepository(MenuDetail).findOne({ id: menuDetailColumn.menuDetail }),
       createrId: context.state.user.id,
-      updaterId: context.state.user.id
+      updater: context.state.user
     })
   }
 }

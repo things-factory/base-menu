@@ -16,7 +16,7 @@ export const updateMenuDetailButton = {
     return await repository.save({
       ...menuDetailButton,
       ...patch,
-      updaterId: context.state.user.id
+      updater: context.state.user
     })
   }
 }

@@ -9,8 +9,8 @@ export const createMenuDetailButton = {
       menuDetail: await getRepository(MenuDetail).findOne({
         where: { domain: context.domain, id: menuDetailButton.menu }
       }),
-      creatorId: context.state.user.id,
-      updaterId: context.state.user.id
+      creator: context.state.user,
+      updater: context.state.user
     })
   }
 }

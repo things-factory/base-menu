@@ -26,7 +26,7 @@ export const updateMenu = {
       ...menu,
       ...patch,
       childrens: await getRepository(Menu).findByIds(childrenIds),
-      updaterId: context.state.user.id
+      updater: context.state.user
     })
   }
 }

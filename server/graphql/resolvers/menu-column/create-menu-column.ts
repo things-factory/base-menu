@@ -7,8 +7,8 @@ export const createMenuColumn = {
       domain: context.domain,
       ...menuColumn,
       menu: await getRepository(Menu).findOne({ where: { domain: context.domain, name: menuColumn.menu } }),
-      creatorId: context.state.user.id,
-      updaterId: context.state.user.id
+      creator: context.state.user,
+      updater: context.state.user
     })
   }
 }
