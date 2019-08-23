@@ -24,9 +24,7 @@ export class Menu {
   @ManyToOne(type => Domain)
   domain: Domain
 
-  @Column({
-    unique: true
-  })
+  @Column()
   name: string
 
   @Column({
