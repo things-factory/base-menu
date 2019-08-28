@@ -4,7 +4,9 @@ import { Column, CreateDateColumn, Entity, Index, ManyToOne, PrimaryGeneratedCol
 import { Menu } from './menu'
 
 @Entity()
-@Index('ix_menu_column_0', (menuColumn: MenuColumn) => [menuColumn.menu, menuColumn.name], { unique: true })
+@Index('ix_menu_column_0', (menuColumn: MenuColumn) => [menuColumn.domain, menuColumn.menu, menuColumn.name], {
+  unique: true
+})
 @Index('ix_menu_column_1', (menuColumn: MenuColumn) => [menuColumn.menu, menuColumn.rank])
 export class MenuColumn {
   @PrimaryGeneratedColumn('uuid')
