@@ -5,6 +5,8 @@ import { userMenusResolver } from './user-menus'
 import { updateMenu } from './update-menu'
 import { createMenu } from './create-menu'
 import { deleteMenu } from './delete-menu'
+import { deleteMenus } from './delete-menus'
+import { updateMultipleMenu } from './update-multiple-menu'
 
 export const Query = {
   ...menusResolver,
@@ -15,5 +17,7 @@ export const Query = {
 export const Mutation = {
   ...updateMenu,
   ...createMenu,
-  ...deleteMenu
+  ...deleteMenu,
+  ...deleteMenus,
+  ...updateMultipleMenu
 }

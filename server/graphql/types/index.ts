@@ -6,6 +6,8 @@ import * as MenuDetail from './menu-detail'
 import * as MenuDetailColumn from './menu-detail-column'
 import * as MenuDetailButton from './menu-detail-button'
 
+import { Filter, Pagination, Sorting } from '@things-factory/shell'
+
 export const queries = [
   Menu.Query,
   MenuButton.Query,
@@ -25,6 +27,9 @@ export const mutations = [
 ]
 
 export const types = [
+  Filter,
+  Pagination,
+  Sorting,
   ...Menu.Types,
   ...MenuButton.Types,
   ...MenuColumn.Types,

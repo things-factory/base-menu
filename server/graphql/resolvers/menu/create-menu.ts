@@ -3,16 +3,15 @@ import { Menu } from '../../../entities'
 
 export const createMenu = {
   async createMenu(_: any, { menu }, context: any) {
-    const repository = getRepository(Menu)
     if (menu.parent) {
-      menu.parent = await repository.findOne({ where: { domain: context.domain, name: menu.parent } })
+      menu.parent = await getRepository(Menu).findOne({ where: { domain: context.domain, name: menu.parent } })
     }
 
-    return await repository.save({
+    return await getRepository(Menu).save({
+      ...menu,
       domain: context.domain,
       creator: context.state.user,
-      updater: context.state.user,
-      ...menu
+      updater: context.state.user
     })
   }
 }

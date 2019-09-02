@@ -2,7 +2,6 @@ import { Menu } from './menu'
 import { NewMenu } from './new-menu'
 import { MenuPatch } from './menu-patch'
 import { MenuList } from './menu-list'
-import { Filter, Pagination, Sorting } from '@things-factory/shell'
 
 export const Mutation = `
   createMenu (
@@ -14,9 +13,17 @@ export const Mutation = `
     patch: MenuPatch!
   ): Menu
 
+  updateMultipleMenu (
+    patches: [MenuPatch]!
+  ): [Menu]
+
   deleteMenu (
     name: String!
-  ): Menu
+  ): Boolean
+
+  deleteMenus (
+    names: [String]!
+  ): Boolean
 `
 
 export const Query = `
@@ -25,4 +32,4 @@ export const Query = `
   userMenus: [Menu]
 `
 
-export const Types = [Filter, Pagination, Sorting, Menu, NewMenu, MenuPatch, MenuList]
+export const Types = [Menu, NewMenu, MenuPatch, MenuList]

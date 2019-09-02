@@ -1,20 +1,16 @@
-import { buildQuery, ListParam } from '@things-factory/shell'
+import { convertListParams, ListParam } from '@things-factory/shell'
 import { getRepository } from 'typeorm'
 import { Menu } from '../../../entities'
 
 export const menusResolver = {
   async menus(_: any, params: ListParam, context: any) {
-    const queryBuilder = getRepository(Menu).createQueryBuilder()
-    buildQuery(queryBuilder, params, context)
-    const [items, total] = await queryBuilder
-      .leftJoinAndSelect('Menu.domain', 'Domain')
-      .leftJoinAndSelect('Menu.parent', 'Parent')
-      .leftJoinAndSelect('Menu.childrens', 'Childrens')
-      .leftJoinAndSelect('Menu.buttons', 'Buttons')
-      .leftJoinAndSelect('Menu.columns', 'Columns')
-      .leftJoinAndSelect('Menu.creator', 'Creator')
-      .leftJoinAndSelect('Menu.updater', 'Updater')
-      .getManyAndCount()
+    const convertedParams = convertListParams(params)
+    convertedParams.where.domain = context.domain
+
+    const [items, total] = await getRepository(Menu).findAndCount({
+      ...convertedParams,
+      relations: ['domain', 'parent', 'childrens', 'buttons', 'columns', 'creator', 'updater']
+    })
 
     return { items, total }
   }
