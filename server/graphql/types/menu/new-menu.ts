@@ -24,9 +24,9 @@ export const NewMenu = gql`
     totalProp: String
     fixedColumns: Int
     iconPath: String
-    parent: String
-    childrens: [String]
-    buttons: [String]
-    columns: [String]
+    parent: ObjectRef
+    childrens: [ObjectRef]
+    buttons: [ObjectRef]
+    columns: [ObjectRef]
   }
 `

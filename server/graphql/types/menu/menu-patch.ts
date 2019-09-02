@@ -2,6 +2,7 @@ import { gql } from 'apollo-server-koa'
 
 export const MenuPatch = gql`
   input MenuPatch {
+    id: String
     name: String
     description: String
     category: String
@@ -24,9 +25,10 @@ export const MenuPatch = gql`
     totalProp: String
     fixedColumns: Int
     iconPath: String
-    parent: String
-    childrens: [String]
-    buttons: [String]
-    columns: [String]
+    parent: ObjectRef
+    childrens: [ObjectRef]
+    buttons: [ObjectRef]
+    columns: [ObjectRef]
+    cuFlag: String
   }
 `
