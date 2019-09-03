@@ -11,7 +11,7 @@ export const updateMenuColumn = {
     })
 
     if (patch.menu) {
-      patch.menu = await getRepository(Menu).findOne({ where: { domain: context.domain, id: patch.menu } })
+      patch.menu = await getRepository(Menu).findOne({ where: { domain: context.state.domain, id: patch.menu } })
     }
 
     return await repository.save({

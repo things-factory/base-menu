@@ -5,7 +5,7 @@ import { Menu } from '../../../entities'
 export const menusResolver = {
   async menus(_: any, params: ListParam, context: any) {
     const convertedParams = convertListParams(params)
-    convertedParams.where.domain = context.domain
+    convertedParams.where.domain = context.state.domain
 
     const [items, total] = await getRepository(Menu).findAndCount({
       ...convertedParams,

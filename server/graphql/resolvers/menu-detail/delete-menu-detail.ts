@@ -3,6 +3,6 @@ import { MenuDetail } from '../../../entities'
 
 export const deleteMenuDetail = {
   async deleteMenuDetail(_: any, { name }, context: any) {
-    return await getRepository(MenuDetail).delete({ domain: context.domain, name })
+    return await getRepository(MenuDetail).delete({ domain: context.state.domain, name })
   }
 }

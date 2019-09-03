@@ -5,7 +5,7 @@ export const updateMenu = {
   async updateMenu(_: any, { name, patch }, context: any) {
     const repository = getRepository(Menu)
     const menu = await repository.findOne({
-      where: { domain: context.domain, name },
+      where: { domain: context.state.domain, name },
       relations: ['childrens']
     })
 

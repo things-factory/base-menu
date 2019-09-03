@@ -3,6 +3,6 @@ import { MenuColumn } from '../../../entities'
 
 export const deleteMenuColumn = {
   async deleteMenuColumn(_: any, { id }, context: any) {
-    return await getRepository(MenuColumn).delete({ domain: context.domain, id })
+    return await getRepository(MenuColumn).delete({ domain: context.state.domain, id })
   }
 }

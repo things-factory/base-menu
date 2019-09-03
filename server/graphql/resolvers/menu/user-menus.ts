@@ -9,7 +9,7 @@ export const userMenusResolver = {
       where: {
         hiddenFlag: false,
         menuType: Equal('MENU'),
-        domain: context.domain
+        domain: context.state.domain
       },
       order: {
         rank: 'ASC'
