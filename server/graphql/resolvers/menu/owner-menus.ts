@@ -1,11 +1,14 @@
 import { Equal, getRepository } from 'typeorm'
 import { Menu } from '../../../entities'
 
-export const userMenusResolver = {
-  async userMenus(_, {}, context) {
+export const ownerMenusResolver = {
+  async ownerMenus(_, {}, context) {
+    //TODO get required priviledge from array
+
     return await getRepository(Menu).find({
       where: {
         hiddenFlag: false,
+        category: Equal('owner'),
         menuType: Equal('MENU'),
         domain: context.state.domain
       },

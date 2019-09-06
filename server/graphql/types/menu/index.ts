@@ -30,6 +30,8 @@ export const Query = `
   menus(filters: [Filter], pagination: Pagination, sortings: [Sorting]): MenuList
   menu(name: String): Menu
   userMenus: [Menu]
+  ownerMenus: [Menu] @priviledge(category: "owner", priviledge: "query")
+  customerMenus: [Menu] @priviledge(category: "customer", priviledge: "query")
 `
 
 export const Types = [Menu, NewMenu, MenuPatch, MenuList]
