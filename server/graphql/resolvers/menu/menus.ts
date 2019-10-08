@@ -15,16 +15,16 @@ export const menusResolver = {
       }
     })
 
-    items = items
-      .map((groupMenu: Menu) => {
-        return {
-          ...groupMenu,
-          childrens: groupMenu.childrens
-            .filter((subMenu: Menu) => !subMenu.hiddenFlag && !subMenu.category)
-            .sort((a: Menu, b: Menu) => a.rank - b.rank)
-        }
-      })
-      .filter((groupMenu: Menu) => groupMenu.childrens && groupMenu.childrens.length)
+    // items = items
+    //   .map((groupMenu: Menu) => {
+    //     return {
+    //       ...groupMenu,
+    //       childrens: groupMenu.childrens
+    //         .filter((subMenu: Menu) => !subMenu.hiddenFlag && !subMenu.category)
+    //         .sort((a: Menu, b: Menu) => a.rank - b.rank)
+    //     }
+    //   })
+    //   .filter((groupMenu: Menu) => groupMenu.childrens && groupMenu.childrens.length)
 
     return { items, total }
   }
