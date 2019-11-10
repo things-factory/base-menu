@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server-koa'
+import gql from 'graphql-tag'
 
 export const MenuDetailPatch = gql`
   input MenuDetailPatch {
