@@ -18,11 +18,11 @@ export const Mutation = `
   ): [Menu]
 
   deleteMenu (
-    name: String!
+    id: String!
   ): Boolean
 
   deleteMenus (
-    names: [String]!
+    ids: [String]!
   ): Boolean
 `
 

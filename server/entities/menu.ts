@@ -32,10 +32,17 @@ export class Menu {
   })
   description: string
 
-  @ManyToOne(type => Menu, parent => parent.childrens, { nullable: true })
+  @ManyToOne(
+    type => Menu,
+    parent => parent.childrens,
+    { nullable: true }
+  )
   parent: Menu
 
-  @OneToMany(type => Menu, child => child.parent)
+  @OneToMany(
+    type => Menu,
+    child => child.parent
+  )
   childrens: Menu[]
 
   @Column({
@@ -64,7 +71,8 @@ export class Menu {
   iconPath: string
 
   @Column({
-    nullable: true
+    nullable: true,
+    default: false
   })
   hiddenFlag: boolean
 
@@ -138,10 +146,16 @@ export class Menu {
   })
   fixedColumns: number
 
-  @OneToMany(type => MenuButton, menuButton => menuButton.menu)
+  @OneToMany(
+    type => MenuButton,
+    menuButton => menuButton.menu
+  )
   buttons: MenuButton[]
 
-  @OneToMany(type => MenuColumn, menuColumn => menuColumn.menu)
+  @OneToMany(
+    type => MenuColumn,
+    menuColumn => menuColumn.menu
+  )
   columns: MenuColumn[]
 
   @CreateDateColumn()
