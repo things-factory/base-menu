@@ -1,8 +1,13 @@
-import { getRepository } from 'typeorm'
+import { EntityManager, Repository, getRepository } from 'typeorm'
 import { Menu } from '../../../entities'
 
-export const deleteMenus = {
+export const deleteMenusResolver = {
   async deleteMenus(_: any, { ids }, _context: any) {
-    await getRepository(Menu).delete(ids)
+    deleteMenus(ids)
   }
+}
+
+export async function deleteMenus(ids: string[], trxMgr?: EntityManager): Promise<void> {
+  const menuRepo: Repository<Menu> = trxMgr?.getRepository(Menu) || getRepository(Menu)
+  await menuRepo.delete(ids)
 }

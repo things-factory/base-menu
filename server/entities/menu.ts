@@ -1,4 +1,4 @@
-import { User } from '@things-factory/auth-base'
+import { Role, User } from '@things-factory/auth-base'
 import { Domain } from '@things-factory/shell'
 import {
   Column,
@@ -59,6 +59,9 @@ export class Menu {
     nullable: true
   })
   category: string
+
+  @ManyToOne(type => Role)
+  role: Role
 
   @Column('int', {
     nullable: true

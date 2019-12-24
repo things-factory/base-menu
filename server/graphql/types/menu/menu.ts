@@ -27,6 +27,7 @@ export const Menu = gql`
     fixedColumns: Int
     iconPath: String
     parent: Menu
+    role: Role
     childrens: [Menu]
     buttons: [MenuButton]
     columns: [MenuColumn]
