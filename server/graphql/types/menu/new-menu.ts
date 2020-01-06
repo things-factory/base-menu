@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server-koa'
+import gql from 'graphql-tag'
 
 export const NewMenu = gql`
   input NewMenu {
@@ -24,6 +24,7 @@ export const NewMenu = gql`
     totalProp: String
     fixedColumns: Int
     iconPath: String
+    role: ObjectRef
     parent: ObjectRef
     childrens: [ObjectRef]
     buttons: [ObjectRef]

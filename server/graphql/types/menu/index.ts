@@ -1,7 +1,7 @@
 import { Menu } from './menu'
-import { NewMenu } from './new-menu'
-import { MenuPatch } from './menu-patch'
 import { MenuList } from './menu-list'
+import { MenuPatch } from './menu-patch'
+import { NewMenu } from './new-menu'
 
 export const Mutation = `
   createMenu (
@@ -9,7 +9,7 @@ export const Mutation = `
   ): Menu
 
   updateMenu (
-    name: String!
+    id: String!
     patch: MenuPatch!
   ): Menu
 
@@ -18,17 +18,17 @@ export const Mutation = `
   ): [Menu]
 
   deleteMenu (
-    name: String!
+    id: String!
   ): Boolean
 
   deleteMenus (
-    names: [String]!
+    ids: [String]!
   ): Boolean
 `
 
 export const Query = `
   menus(filters: [Filter], pagination: Pagination, sortings: [Sorting]): MenuList
-  menu(name: String): Menu
+  menu(id: String): Menu
   userMenus: [Menu]
 `
 

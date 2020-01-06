@@ -9,7 +9,7 @@ export const menusResolver = {
 
     var [items, total] = await getRepository(Menu).findAndCount({
       ...convertedParams,
-      relations: ['domain', 'parent', 'childrens', 'buttons', 'columns', 'creator', 'updater'],
+      relations: ['domain', 'parent', 'role', 'childrens', 'buttons', 'columns', 'creator', 'updater'],
       order: {
         rank: 'ASC'
       }
